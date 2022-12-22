@@ -10,3 +10,40 @@ main{
 }
 
 /*****************************************************/
+
+/* everything below is for the navbar */
+.bar-at-top {
+    background-color: #5C534A;
+    height: 35px;
+    width: 100%;
+}
+
+.topper {
+    background-color: #392000;
+    margin-top: 55px;
+    height: 160px;
+    display: flex;
+}
+
+.navbar-brand {
+    margin: auto 0;
+
+}
+
+.logo {
+    width:140px;
+}
+
+.school-name {
+    color: #AA865B;
+}
+
+body {
+    height: 10000px;
+}
+
+.background-color {
+    background-color: #AA865B;
+}
+
+/* everything above is for the navbar */
