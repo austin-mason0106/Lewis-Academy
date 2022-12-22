@@ -47,3 +47,37 @@ body {
 }
 
 /* everything above is for the navbar */
+<<<<<<< Updated upstream
+=======
+
+/* This is for the about us page */
+
+.image-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+}
+
+  .image-block img {
+    width: 50%;
+}
+
+  .picBlock {
+    display: flex;
+    flex-direction: row;
+    background-image: url(Images/background.jpg);
+    margin: 10px;
+}
+
+.textBlock {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin: 75px;
+    
+
+}
+>>>>>>> Stashed changes
