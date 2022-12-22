@@ -1,0 +1,9 @@
+.mainFlex{
+    display: flex;
+    padding: 10px;
+}
+
+.mainDivFlex{
+    flex: 1;
+    
+}
