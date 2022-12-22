@@ -1,9 +1,12 @@
-.mainFlex{
+/******************* style for login page ***************/
+main{
     display: flex;
-    padding: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 .mainDivFlex{
-    flex: 1;
     
 }
+
+/*****************************************************/
