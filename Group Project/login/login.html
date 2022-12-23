@@ -9,11 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript">
         <!--
-            
-            /********************************
-             * Create object generater?     *
-             * ******************************/
-            
+        
             const admin = {id:"admin", email:"admin@lewisprep.com", pass:"admin123"};           //declare member objects
             const parent = {id:"parent", email:"parent@lewisprep.com", pass:"parent123"};
             
@@ -25,17 +21,29 @@
                 var user = document.frm.user.value;
                 var pass = document.frm.pass.value;
 
+                access = ask(user, pass);
+
+                if(access) window.location.href = "dummyPage.html";          /********insert parent portal html page here**********/
+                
+            }
+
+            function ask(name, pass) {
+                
                 for (i = 0; i < members.length; i++) {          //run through member array and match user input to verify
-                    if ((user == members[i].id || user == members[i].email) && (pass == members[i].pass)) {
-                        alert("acess granted");
-                        return access = true;       //if verified: end loop, and return access = true;
+                    
+                    if ((name == members[i].id || name == members[i].email) && (pass == members[i].pass)) {
+                        // alert("acess granted");
+                        return true;       //if verified: end loop, and return true; 
                     }
                 }
-                
                 alert("Username or password not valid");
-            }    
+                
+            }
+
+            
 
             //add way to access next html page if access granted
+
         //-->
     </script>
 </head>
@@ -44,7 +52,7 @@
         
     </header>
     
-    <main class="mainFlex">
+    <main>
         <div class="mainDivFlex">
             <img src="C:\Users\vrigo\OneDrive\Desktop\TrainingP\groupProj\images\logo.png" alt="raptor logo" width="200px" height="200px">
         </div>          <!--end logo div-->
@@ -78,5 +86,7 @@
     <footer></footer>
 
     <!-- REVIEW FLEX BOX PROPERTIES TO CENTER CONTENT WITH A BACKGROUND -->
+
+    <!-- Add background to body tag, and add content with divs -->
 </body>
 </html>
