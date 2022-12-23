@@ -75,6 +75,7 @@
             <h2>Grades</h2>
             <br>
             <form class="Grade">
+                <!--Each id on the p tag allows the javascrippt to edit the p tag text -->
                 <!--Show the math grade and display in temporary math grade -->
                 <p id="MathGrade">Math Grade:<p>
                 <p >Temporary Math Grade:<p>
@@ -110,7 +111,10 @@
                 <p id="E2Grade">Elective Two Grade:<p>
                 <p >Temporary Elective Two Grade:<p>
                 <input type="number" id="E2GradeTemp" name="Elective Two Grade" min="0" max="100" step="10" value="0">
-                                   
+                    
+                <!--Show the average grade and display in average grade -->
+                <p id="AverageGrade">Average Grade:<p>
+                <p id="AverageGradeTemp">Temporary Average Grade:<p>
             </form>
         </div>
     </div>
@@ -142,7 +146,17 @@
         function currentSlide(n) {
           showSlides(slideIndex = n);
         }
-        
+
+        function sumArray(array) {
+            let sum = 0; 
+            for (let i = 0; i < array.length; i += 1) {
+                sum += array[i];
+            }
+            return sum;
+        }
+
+
+            
         function showSlides(n) {
           let i;
           let slides = document.getElementsByClassName("mySlides");
@@ -165,6 +179,7 @@
         
 
         /*This function will show the grades of each student
+        THe arguement will give the index of what student we are looking at
         The 1st if statement for Math
         2nd if statement for Reading
         3rd if statement for Science
@@ -288,6 +303,23 @@
                 document.getElementById("E2Grade").innerHTML = "Elective Two Grade: F";
             }
 
+            let AverageGrade= sumArray(grades[x])/7;
+
+            if(AverageGrade>= 90){
+                document.getElementById("AverageGrade").innerHTML = "Average Grade: A";
+            }
+            else if(AverageGrade>= 80){
+                document.getElementById("AverageGrade").innerHTML = "Average Grade: B";
+            }
+            else if(AverageGrade>= 70){
+                document.getElementById("AverageGrade").innerHTML = "Average Grade: C";
+            }
+            else if(AverageGrade>= 65){
+                document.getElementById("AverageGrade").innerHTML = "Average Grade: D";
+            }
+            else {
+                document.getElementById("AverageGrade").innerHTML = "Average Grade: F";
+            }
         }
         </script>
             
