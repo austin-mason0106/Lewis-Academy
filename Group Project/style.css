@@ -1,12 +1,15 @@
 /******************* style for login page ***************/
 main{
+    background-color: #AA865B;
+
+    /* Flex */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .mainDivFlex{
-    
+    background-color: black;
 }
 
 /*****************************************************/
