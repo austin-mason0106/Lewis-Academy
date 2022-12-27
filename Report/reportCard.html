@@ -74,7 +74,7 @@
         <div class="container right">
             <h2>Grades</h2>
             <br>
-            <form class="Grade">
+            
                 <!--Each id on the p tag allows the javascrippt to edit the p tag text -->
                 <!--Show the math grade and display in temporary math grade -->
                 <p id="MathGrade">Math Grade:<p>
@@ -112,10 +112,11 @@
                 <p >Temporary Elective Two Grade:<p>
                 <input type="number" id="E2GradeTemp" name="Elective Two Grade" min="0" max="100" step="10" value="0">
                     
-                <!--Show the average grade and display in average grade -->
+                <!--Show the average grade and display in average grade and temp average -->
                 <p id="AverageGrade">Average Grade:<p>
                 <p id="AverageGradeTemp">Temporary Average Grade:<p>
-            </form>
+                <button id="myBtn">Calulate Temp Grade</button>
+            
         </div>
     </div>
         
@@ -321,8 +322,40 @@
                 document.getElementById("AverageGrade").innerHTML = "Average Grade: F";
             }
         }
+
+        //this assigns the function for the temporary grade calulator
+        document.getElementById("myBtn").onclick = tempGrade;
+
+        //this is where we pull all the ids from the inputs and calulate the temporary grade
+        function tempGrade() {
+            //I had to convert values into numbers because the function returns a string
+            let tempAverageGrade= (Number(document.getElementById("MathGradeTemp").value)+
+            Number(document.getElementById("ReadingGradeTemp").value)+
+            Number(document.getElementById("SSGradeTemp").value)+
+            Number(document.getElementById("ScienceGradeTemp").value)+
+            Number(document.getElementById("PEGradeTemp").value)+
+            Number(document.getElementById("E1GradeTemp").value)+
+            Number(document.getElementById("E2GradeTemp").value))/7;
+
+
+            if(tempAverageGrade>= 90){
+                document.getElementById("AverageGradeTemp").innerHTML = "Temporary Average Grade: A";
+            }
+            else if(tempAverageGrade>= 80){
+                document.getElementById("AverageGradeTemp").innerHTML = "Temporary Average Grade: B";
+            }
+            else if(tempAverageGrade>= 70){
+                document.getElementById("AverageGradeTemp").innerHTML = "Temporary Average Grade: C";
+            }
+            else if(tempAverageGrade>= 65){
+                document.getElementById("AverageGradeTemp").innerHTML = "Temporary Average Grade: D";
+            }
+            else {
+                document.getElementById("AverageGradeTemp").innerHTML = "Temporary Average Grade: F";
+            }
+        }
         </script>
             
         </body>
 </body>
-</html>
+</html> 
