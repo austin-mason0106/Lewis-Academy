@@ -5,13 +5,13 @@
 }
 
 .loginHeader{
-    background-color: #AA865B;
-    border: 2px solid blue;
-    
+    /* border: 2px solid blue; */
+    background-color: #3f5948;
 }
 
 .loginContainerDiv{
-    border: 5px solid red;
+    background-color: #3f5948;
+    padding: 100px 10px 300px 10px;
 
     /* Flex */
     display: flex;
@@ -19,19 +19,25 @@
     align-items: center;
     justify-content: center;
 }
-
+.bigBox{
+    background-color: white;
+    border: 5px solid #AA865B;
+    border-radius: 10px;
+    padding: 2px 0px 2px 50px; 
+}
 .mainBox1{
+    padding-left: 10px;
     flex: 1;
     justify-content: center;
 }
 .mainBox2{
     flex: 1;
+    color: #5C534A;
 }
 
 .loginFooter{
     height: 50px;
-    background: 10px solid green;
-
+    background-color: #3f5948;
     /* Flex */
     display: flex;
 }
