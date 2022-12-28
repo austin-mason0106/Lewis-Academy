@@ -1,8 +1,12 @@
 /* everything below is for the navbar */
+body {
+    background-color: #FFF4EE;
+}
 .bar-at-top {
     background-color: #5C534A;
     height: 35px;
     width: 100%;
+    
 }
 
 .topper {
@@ -10,10 +14,11 @@
     margin-top: 55px;
     height: 160px;
     display: flex;
+    border:#AA865B solid;
 }
 
 nav {
-    /font-family: Georgia, 'Times New Roman', Arial; /* <----- this is font for writing/smaller paragrapgs */
+    font-family: Georgia, 'Times New Roman', Arial; /* <----- this is font for writing/smaller paragrapgs */
 }
 
 .navbar-brand {
@@ -66,4 +71,41 @@ nav {
     margin: 75px;
     
 
+}
+
+.footer {
+    color: #AA865B;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items:center;
+    background-color: #392000;
+    padding: 20px 0;
+    border: solid;
+    flex-basis: 100vw;
+    margin-top:20px;
+    font-family: Georgia, 'Times New Roman', Arial;
+}
+
+.footer p{
+    align-self:center;
+    padding: 0 0;
+    margin: 2px 0;
+    text-align:center;
+   
+}
+
+.footer-link-list {
+    display: flex;
+    justify-content: center;
+    margin: 0px 0 10px 0;
+}
+
+.footer a {
+    color: #AA865B;
+    /* text-decoration:none; */
+}
+    
+.footer li{
+    margin: 0px 20px;
 }
