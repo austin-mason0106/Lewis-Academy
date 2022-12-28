@@ -1,16 +1,3 @@
-/******************* style for login page ***************/
-main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.mainDivFlex{
-    
-}
-
-/*****************************************************/
-
 /* everything below is for the navbar */
 .bar-at-top {
     background-color: #5C534A;
@@ -47,8 +34,6 @@ body {
 }
 
 /* everything above is for the navbar */
-<<<<<<< Updated upstream
-=======
 
 /* This is for the about us page */
 
@@ -80,4 +65,3 @@ body {
     
 
 }
->>>>>>> Stashed changes
