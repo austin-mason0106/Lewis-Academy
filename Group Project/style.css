@@ -67,3 +67,20 @@ nav {
     
 
 }
+
+.about-us-body{
+    margin-top: 50px;
+    margin-left:150px;
+    margin-right:150px;
+}
+
+.videoBlock{
+    display:flex;
+    justify-content: center;
+}
+
+#vidDescription{
+    margin:25px;
+    display: flex;
+    justify-content: center;
+}
