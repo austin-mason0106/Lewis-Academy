@@ -12,6 +12,10 @@
     display: flex;
 }
 
+nav {
+    /font-family: Georgia, 'Times New Roman', Arial; /* <----- this is font for writing/smaller paragrapgs */
+}
+
 .navbar-brand {
     margin: auto 0;
 
@@ -23,11 +27,9 @@
 
 .school-name {
     color: #AA865B;
+    font-family: Verdana, 'Times New Roman';  /* <----this is fonts for headings */
 }
 
-body {
-    height: 10000px;
-}
 
 .background-color {
     background-color: #AA865B;
