@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Portal</title>
     <link rel="icon" type="image/x-icon" href="C:\Users\vrigo\OneDrive\Desktop\TrainingP\groupProj\images\logo.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loginStyle.css">
     <script type="text/javascript">
         <!--
         
@@ -45,40 +45,44 @@
     </script>
 </head>
 <body>
-    <header>
-        
+    <header class="loginHeader">
+        <h1>This is the header</h1>
     </header>
     
-    <div class="mainDivFlex">
-        <img src="C:\Users\vrigo\OneDrive\Desktop\TrainingP\groupProj\images\logo.png" alt="raptor logo" width="200px" height="200px">
-    </div>          <!--end logo div-->
-    <div class="mainDivFlex">
-        <form name="frm">           <!--write a form that validates user-input for a login-->
-            <table>
-                <tr>
-                    <td><strong>Username/Email</strong></td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="text" name="user">
-                    </td>
-                </tr>
-                <tr>
-                    <td><strong>Password</strong></td>
-                </tr>
-                <tr>
-                    <td width="300px"><input type="text" name="pass" width="300px"></td>
-                </tr>
-                <tr>
-                    <td colspan="2" width="100">
-                        <input type="button" value="LOG IN" onclick="validate();">
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </div>          <!-- end form div -->
+    <div class="loginContainerDiv">
+        <div class="mainBox1">
+            <img src="C:\Users\vrigo\OneDrive\Desktop\TrainingP\groupProj\images\logo.png" alt="raptor logo" width="200px" height="200px">
+        </div>          <!--end logo div-->
+        <div class="mainBox2">
+            <form name="frm">           <!--write a form that validates user-input for a login-->
+                <table>
+                    <tr>
+                        <td><strong>Username/Email</strong></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" name="user">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Password</strong></td>
+                    </tr>
+                    <tr>
+                        <td width="300px"><input type="text" name="pass" width="300px"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" width="100">
+                            <input type="button" value="LOG IN" onclick="validate();">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>          <!-- end form div -->
+    </div>          <!--end Container div-->
     
-    <footer></footer>
+    <div class="loginFooter">
+        <h3>This is the footer</h3>
+    </div>          <!--end footer div-->
 
     <!-- REVIEW FLEX BOX PROPERTIES TO CENTER CONTENT WITH A BACKGROUND -->
 
