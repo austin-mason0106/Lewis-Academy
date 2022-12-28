@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
+
+    <form action="/my-handling-form-page" method="post">
+            
+        
+            <fieldset>
+                <legend>School Year:</legend>
+            
+                <div>
+                  <input type="radio" id="current_school_year" name="drone" value="current_school_year"
+                         checked>
+                  <label for="current_school_year">Current School Year (2022-2023)</label>
+                </div>
+            
+                <div>
+                  <input type="radio" id="next_school_year" name="drone" value="next_school_year">
+                  <label for="next_school_year">Next School Year (2023-2024)</label>
+                </div>
+            </fieldset>
+
+
+          
+            <label for="name">Parent/Guardian First Name</label>
+            <input type="text" id="name" name="parent_firstname" />
+
+            <label for="name">Parent/Guardian Last Name</label>
+            <input type="text" id="name" name="parent_firstname" />
+        
+
+            <div class="form-group">
+                <label for="email">Parent/Guardian E-mail Address:</label>
+                <input type="email" class="form-control" id="emailInput" placeholder="Email" aria-required="true" required/>
+              </div>
+              <div class="form-group">
+                <label for="confirmEmail">Confirm E-mail Address:</label>
+                <input type="email" class="form-control" id="ConfirmEmailInput" placeholder="ConfirmEmail" 
+                  onblur="if(this.value!=document.getElementById('emailInput').value) alert('Nope!')"  aria-required="true" required/>
+              </div>
+        
+        
+              <label for="phone">Primary Telephone Number:</label>
+              <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>      
+              <small>Format: 123-456-7890</small>
+
+              <div class="form-group">
+                <input type="street" 
+                       class="form-control" 
+                       id="autocomplete" 
+                       placeholder="Street"><br>
+                
+                <input type="city" 
+                       class="form-control" 
+                       id="inputCity" 
+                       placeholder="City"><br>
+                
+                <input type="state" 
+                       class="form-control" 
+                       id="inputState" 
+                       placeholder="State"><br>
+                
+                <input type="zip" 
+                       class="form-control" 
+                       id="inputZip" 
+                       placeholder="Zip">
+
+        
+      </form>
+    
+</body>
+</html>
