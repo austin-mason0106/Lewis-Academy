@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapper{
+    width: 100%;
+    float: left;
+    display: flex;
+    
+
+    
+    
+}
+
+.card{
+    min-height: 60px;
+    width: 400px;
+    border-radius: 20px;
+    background-color: bisque;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 
+    0 0 50px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    margin: 0px 50px 0px 50px;
+}
+
+.info{
+    display: flex;
+    
+}
+
+.grade{
+    padding-left: 20px;
+    font-size: 80px;
+}
+
+.profile{
+    width: 350px;
+    
+}

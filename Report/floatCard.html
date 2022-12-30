@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="floatingCardSheet.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="card">
+            <div class ="student">
+                <img class = "profile" src="reportCardImages/adobestock_165061057_autor_antonioguillem_1.jpeg" >
+            </div>
+            <div class ="info">
+                <h1>Final Grade:</h1>
+                <h1 class="grade" id = "grade1">NA</h1>
+            </div>
+        </div>
+        <div class="card">
+            <div class ="student">
+                <img class = "profile" src="reportCardImages/bigstock-Spanish-Male-Student-With-Grou-2862461532-1.jpg" >
+            </div>
+            <div class ="info">
+                <h1>Final Grade:</h1>
+                <h1 class="grade" id = "grade2">NA</h1>
+            </div>
+        </div>
+        <div class="card">
+            <div class ="student">
+                <img class = "profile" src="reportCardImages/essay-writting-750x430.jpg" >
+            </div>
+            <div class ="info">
+                <h1>Final Grade:</h1>
+                <h1 class="grade" id = "grade3">NA</h1>
+            </div>
+        </div>
+        <div class="card">
+            <div class ="student">
+                <img class = "profile" src="reportCardImages/student-3500990_960_720_opt.jpg" >
+            </div>
+            <div class ="info">
+                <h1>Final Grade:</h1>
+                <h1 class="grade" id = "grade4">NA</h1>
+            </div>
+        </div>
+
+                <div class="card">
+            <div class ="student">
+                <img class = "profile" src="reportCardImages/successful-college-student-lg.png" >
+            </div>
+            <div class ="info">
+                <h1>Final Grade:</h1>
+                <h1 class="grade" id = "grade5">NA</h1>
+            </div>
+        </div>
+    </div>
+
+    <script> /*2d array, the first position is the student's array holding thier grade
+        The second position will be a specfific grade
+        1st position in the 2nd array is Math
+        2nd position in the 2nd array is Reading
+        3rd position in the 2nd array is Science
+        4th position in the 2nd array is Social Study
+        5th position in the 2nd array is Physical Education
+        6th position in the 2nd array is Elective One
+        7th position in the 2nd array is Elective Two
+        */
+        let grades = [[97,89,76,65,57,90,67],
+                    [70,50,34,63,77,43,53],
+                    [89,77,79,68,57,80,75],
+                    [75,88,98,95,87,90,97],
+                    [69,70,76,65,77,90,67],
+                    [90,89,76,90,85,90,89]];
+
+        function sumArray(array) {
+            let sum = 0; 
+            for (let i = 0; i < array.length; i += 1) {
+                sum += array[i];
+            }
+            return sum;
+        }
+        
+        //Arguments are the array with the grades and the ID of the card you are using
+        function showGrades(x,y){
+
+            let AverageGrade= sumArray(grades[x])/7;
+
+            
+            if(AverageGrade>= 90){
+                document.getElementById(y).innerHTML = "A";
+            }
+            else if(AverageGrade>= 80){
+                document.getElementById(y).innerHTML = "B";
+            }
+            else if(AverageGrade>= 70){
+                document.getElementById(y).innerHTML = "C";
+            }
+            else if(AverageGrade>= 65){
+                document.getElementById(y).innerHTML = "D";
+            }
+            else {
+                document.getElementById(y).innerHTML = "F";
+            }
+        }
+
+        showGrades(1,"grade1");
+        showGrades(2,"grade2");
+        showGrades(3,"grade3");
+        showGrades(4,"grade4");
+        showGrades(5,"grade5");
+        </script>
+</body>
+</html>
