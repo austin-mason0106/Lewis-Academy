@@ -56,23 +56,29 @@
             <div class="mainBox2">
                 <form name="frm">           <!--write a form that validates user-input for a login-->
                     <table>
-                        <tr>
+                        <!-- <tr>
                             <td><strong>Username/Email</strong></td>
-                        </tr>
+                        </tr> -->
                         <tr>
                             <td>
-                                <input type="text" name="user">
+                                <div class="formDiv">
+                                    <input type="text" name="user" value placeholder="Username/Email" class="input">
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- <tr>
+                            <td><strong>Password</strong></td>
+                        </tr> -->
+                        <tr>
+                            <td>
+                                <div class="formDiv">
+                                    <input type="text" name="pass" placeholder="Password" class="input">
+                                </div>
                             </td>
                         </tr>
                         <tr>
-                            <td><strong>Password</strong></td>
-                        </tr>
-                        <tr>
-                            <td width="300px"><input type="text" name="pass" width="300px"></td>
-                        </tr>
-                        <tr>
                             <td colspan="2" width="100">
-                                <input type="button" value="LOG IN" onclick="validate();">
+                                <input type="button" value="LOG IN" class="button" onclick="validate();">
                             </td>
                         </tr>
                     </table>
@@ -86,8 +92,5 @@
 
     </footer>
 
-    <!-- REVIEW FLEX BOX PROPERTIES TO CENTER CONTENT WITH A BACKGROUND -->
-
-    <!-- Add background to body tag, and add content with divs -->
 </body>
 </html>
