@@ -100,3 +100,39 @@
             padding: 20px;
             font-size: medium;
         }
+        .footer {
+    color: #AA865B;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items:center;
+    background-color: #392000;
+    padding: 20px 0;
+    border: solid;
+    flex-basis: 100vw;
+    margin-top:20px;
+    font-family: Georgia, 'Times New Roman', Arial;
+}
+
+.footer p{
+    align-self:center;
+    padding: 0 0;
+    margin: 2px 0;
+    text-align:center;
+   
+}
+
+.footer-link-list {
+    display: flex;
+    justify-content: center;
+    margin: 0px 0 10px 0;
+}
+
+.footer a {
+    color: #AA865B;
+    /* text-decoration:none; */
+}
+    
+.footer li{
+    margin: 0px 20px;
+}
