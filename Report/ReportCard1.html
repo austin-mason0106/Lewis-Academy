@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reportCard1CSS.css">
+</head>
+<body>
+    <h1 id="name">Student Name</h1>
+    <img id="profile" src="reportCardImages/bigstock-Spanish-Male-Student-With-Grou-2862461532-1.jpg">
+    <table>
+        <tr>
+            <td>Subject</td>
+            <td >Grade</td>
+            <td>Temporary Grade</td>
+        </tr>
+        <tr>
+            <td>Math</td>
+            <td id = 'Math'>NA</td>
+            <td><input type="number" id="MathGradeTemp" name="Temperay Math Grade" min="0" max="100" step="10" value="0"></td>
+        </tr>
+        <tr>
+            <td>Reading</td>
+            <td id = 'Reading'>NA</td>
+            <td><input type="number" id="ReadingGradeTemp" name="Temperay Reading Grade" min="0" max="100" step="10" value="0"></td>
+        </tr>
+        <tr>
+            <td>Science</td>
+            <td id = 'Science'>NA</td>
+            <td><input type="number" id="ScienceGradeTemp" name="Temperay Science Grade" min="0" max="100" step="10" value="0"></td>
+        </tr>
+        <tr>
+            <td>Social Study</td>
+            <td id = 'Social Study'>NA</td>
+            <td><input type="number" id="SSGradeTemp" name="Temperay Social Study Grade" min="0" max="100" step="10" value="0"></td>
+        </tr>
+        <tr>
+            <td>Physical Education</td>
+            <td id = 'Physical Education'>NA</td>
+            <td><input type="number" id="PEGradeTemp" name="Temperay Physical Education Grade" min="0" max="100" step="10" value="0"></td>
+        </tr>
+        <tr>
+            <td>Elective One</td>
+            <td id = 'Elective One'>NA</td>
+            <td><input type="number" id="E1GradeTemp" name="Temperay Elective One Grade" min="0" max="100" step="10" value="0"></td>
+        </tr>
+        <tr>
+            <td>Elective Two</td>
+            <td id = 'Elective Two'>NA</td>
+            <td><input type="number" id="E2GradeTemp" name="Temperay Elective Two Grade" min="0" max="100" step="10" value="0"></td>
+        </tr>
+        <tr>
+            <td>Average Grade</td>
+            <td id = 'Average Grade'>NA</td>
+            <td id = 'AverageGradeTemp'>NA</td>
+        </tr>
+
+    </table>
+    <button id="myBtn">Calulate Temp Grade</button>
+
+    <script>
+        
+        //this is where we pull all the ids from the inputs and calulate the temporary grade
+            function tempGrade() {
+            //I had to convert values into numbers because the function returns a string
+            let tempAverageGrade= (Number(document.getElementById("MathGradeTemp").value)+
+            Number(document.getElementById("ReadingGradeTemp").value)+
+            Number(document.getElementById("SSGradeTemp").value)+
+            Number(document.getElementById("ScienceGradeTemp").value)+
+            Number(document.getElementById("PEGradeTemp").value)+
+            Number(document.getElementById("E1GradeTemp").value)+
+            Number(document.getElementById("E2GradeTemp").value))/7;
+
+
+            if(tempAverageGrade>= 90){
+                document.getElementById("AverageGradeTemp").innerHTML = "A";
+            }
+            else if(tempAverageGrade>= 80){
+                document.getElementById("AverageGradeTemp").innerHTML = "B";
+            }
+            else if(tempAverageGrade>= 70){
+                document.getElementById("AverageGradeTemp").innerHTML = "C";
+            }
+            else if(tempAverageGrade>= 65){
+                document.getElementById("AverageGradeTemp").innerHTML = "D";
+            }
+            else {
+                document.getElementById("AverageGradeTemp").innerHTML = "F";
+            }
+        }
+
+        //this assigns the function for the temporary grade calulator
+        document.getElementById("myBtn").onclick = tempGrade;
+    </script>
+</body>
+</html>
