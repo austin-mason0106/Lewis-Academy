@@ -4,11 +4,9 @@
     border: 0;
 }
 
-.loginHeader{}
-
 .loginContainerDiv{
     background-color: #3f5948;
-    padding: 100px 10px 350px 10px;
+    padding: 50px 10px 200px 10px;
 
     /* Flex */
     display: flex;
@@ -20,7 +18,7 @@
     background-color: white;
     border: 5px solid #AA865B;
     border-radius: 10px;
-    padding: 10px 50px 10px 50px; 
+    padding: 50px 80px 50px 80px; 
 }
 .mainBox1{
     padding-right: 10px;
@@ -29,7 +27,7 @@
 }
 .mainBox2{
     flex: 1;
-    color: #5C534A;
+    /* color: #5C534A; */
 }
 
 .formDiv{}
@@ -38,18 +36,18 @@
     border: 2px solid rgba(144,144,144,.35);
     background-color: rgba(144,144,144,.075);
     border-radius: 5px;
-    padding: 5px 20px 5px 20px;
+    padding: 5px 70px 5px 70px;
 }
 .input:hover{
     background: gray;
 }
 .button{
     border-radius: 5px;
-    padding: 5px 81px 5px 81px;
+    padding: 5px 135px 5px 135px;
+    border: 2px solid rgba(144,144,144,.35);
 }
 .button:hover{
     background: gray;
 }
-.loginFooter{}
 
 /*****************************************************/
