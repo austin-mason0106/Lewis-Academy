@@ -52,29 +52,30 @@
         
           <div class="row">
             <div class="column">
-              <img class="demo cursor" src="reportCardImages/adobestock_165061057_autor_antonioguillem_1.jpeg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+              <img class="demo cursor" src="reportCardImages/adobestock_165061057_autor_antonioguillem_1.jpeg" style="width:100%" onclick="currentSlide(1)" alt="Student 1">
             </div>
             <div class="column">
-              <img class="demo cursor" src="reportCardImages/bigstock-Spanish-Male-Student-With-Grou-2862461532-1.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+              <img class="demo cursor" src="reportCardImages/bigstock-Spanish-Male-Student-With-Grou-2862461532-1.jpg" style="width:100%" onclick="currentSlide(2)" alt="Student 2">
             </div>
             <div class="column">
-              <img class="demo cursor" src="reportCardImages/essay-writting-750x430.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+              <img class="demo cursor" src="reportCardImages/essay-writting-750x430.jpg" style="width:100%" onclick="currentSlide(3)" alt="Student 3">
             </div>
             <div class="column">
-              <img class="demo cursor" src="reportCardImages/itsmi_student_life.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+              <img class="demo cursor" src="reportCardImages/itsmi_student_life.jpg" style="width:100%" onclick="currentSlide(4)" alt="Student 4">
             </div>
             <div class="column">
-              <img class="demo cursor" src="reportCardImages/student-3500990_960_720_opt.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+              <img class="demo cursor" src="reportCardImages/student-3500990_960_720_opt.jpg" style="width:100%" onclick="currentSlide(5)" alt="Student 5">
             </div>    
             <div class="column">
-              <img class="demo cursor" src="reportCardImages/successful-college-student-lg.png" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+              <img class="demo cursor" src="reportCardImages/successful-college-student-lg.png" style="width:100%" onclick="currentSlide(6)" alt="Student 6">
             </div>
           </div>
         </div>
         <div class="container right">
             <h2>Grades</h2>
             <br>
-            <form class="Grade">
+            
+                <!--Each id on the p tag allows the javascrippt to edit the p tag text -->
                 <!--Show the math grade and display in temporary math grade -->
                 <p id="MathGrade">Math Grade:<p>
                 <p >Temporary Math Grade:<p>
@@ -110,8 +111,12 @@
                 <p id="E2Grade">Elective Two Grade:<p>
                 <p >Temporary Elective Two Grade:<p>
                 <input type="number" id="E2GradeTemp" name="Elective Two Grade" min="0" max="100" step="10" value="0">
-                                   
-            </form>
+                    
+                <!--Show the average grade and display in average grade and temp average -->
+                <p id="AverageGrade">Average Grade:<p>
+                <p id="AverageGradeTemp">Temporary Average Grade:<p>
+                <button id="myBtn">Calulate Temp Grade</button>
+            
         </div>
     </div>
         
@@ -142,7 +147,17 @@
         function currentSlide(n) {
           showSlides(slideIndex = n);
         }
-        
+
+        function sumArray(array) {
+            let sum = 0; 
+            for (let i = 0; i < array.length; i += 1) {
+                sum += array[i];
+            }
+            return sum;
+        }
+
+
+            
         function showSlides(n) {
           let i;
           let slides = document.getElementsByClassName("mySlides");
@@ -165,6 +180,8 @@
         
 
         /*This function will show the grades of each student
+        THe arguement will give the index of what student we are looking at,
+        The arguement is an array
         The 1st if statement for Math
         2nd if statement for Reading
         3rd if statement for Science
@@ -288,9 +305,58 @@
                 document.getElementById("E2Grade").innerHTML = "Elective Two Grade: F";
             }
 
+            let AverageGrade= sumArray(grades[x])/7;
+
+            if(AverageGrade>= 90){
+                document.getElementById("AverageGrade").innerHTML = "Average Grade: A";
+            }
+            else if(AverageGrade>= 80){
+                document.getElementById("AverageGrade").innerHTML = "Average Grade: B";
+            }
+            else if(AverageGrade>= 70){
+                document.getElementById("AverageGrade").innerHTML = "Average Grade: C";
+            }
+            else if(AverageGrade>= 65){
+                document.getElementById("AverageGrade").innerHTML = "Average Grade: D";
+            }
+            else {
+                document.getElementById("AverageGrade").innerHTML = "Average Grade: F";
+            }
+        }
+
+        //this assigns the function for the temporary grade calulator
+        document.getElementById("myBtn").onclick = tempGrade;
+
+        //this is where we pull all the ids from the inputs and calulate the temporary grade
+        function tempGrade() {
+            //I had to convert values into numbers because the function returns a string
+            let tempAverageGrade= (Number(document.getElementById("MathGradeTemp").value)+
+            Number(document.getElementById("ReadingGradeTemp").value)+
+            Number(document.getElementById("SSGradeTemp").value)+
+            Number(document.getElementById("ScienceGradeTemp").value)+
+            Number(document.getElementById("PEGradeTemp").value)+
+            Number(document.getElementById("E1GradeTemp").value)+
+            Number(document.getElementById("E2GradeTemp").value))/7;
+
+
+            if(tempAverageGrade>= 90){
+                document.getElementById("AverageGradeTemp").innerHTML = "Temporary Average Grade: A";
+            }
+            else if(tempAverageGrade>= 80){
+                document.getElementById("AverageGradeTemp").innerHTML = "Temporary Average Grade: B";
+            }
+            else if(tempAverageGrade>= 70){
+                document.getElementById("AverageGradeTemp").innerHTML = "Temporary Average Grade: C";
+            }
+            else if(tempAverageGrade>= 65){
+                document.getElementById("AverageGradeTemp").innerHTML = "Temporary Average Grade: D";
+            }
+            else {
+                document.getElementById("AverageGradeTemp").innerHTML = "Temporary Average Grade: F";
+            }
         }
         </script>
             
         </body>
 </body>
-</html>
+</html> 
