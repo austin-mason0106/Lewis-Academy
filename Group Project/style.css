@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 /* everything below is for the navbar */
 
 .bar-at-top {
@@ -137,7 +136,6 @@
     margin: 0px 20px;
 }
 /* -----------footer is above ----------------- */
-=======
         /* everything below is for the navbar */
         
         .bar-at-top {
@@ -165,9 +163,7 @@
             color: #AA865B;
         }
         
-        body {
-            height: 10000px;
-        }
+
         
         .background-color {
             background-color: #AA865B;
@@ -202,7 +198,7 @@
             margin: 75px;
         }
         
-        <<<<<<< Updated upstream .about-us-body {
+        .about-us-body {
             margin-top: 50px;
             margin-left: 150px;
             margin-right: 150px;
@@ -241,5 +237,5 @@
         
         .columns {
             padding: 10px;
+            flex: 33%;
         }
->>>>>>> Stashed changes
