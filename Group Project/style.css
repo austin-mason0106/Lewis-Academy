@@ -1,4 +1,5 @@
 /* everything below is for the navbar */
+
 .bar-at-top {
     background-color: #5C534A;
     height: 35px;
@@ -12,30 +13,29 @@
     display: flex;
 }
 
-nav {
-    /font-family: Georgia, 'Times New Roman', Arial; /* <----- this is font for writing/smaller paragrapgs */
-}
-
 .navbar-brand {
     margin: auto 0;
-
 }
 
 .logo {
-    width:140px;
+    width: 140px;
 }
 
 .school-name {
     color: #AA865B;
-    font-family: Verdana, 'Times New Roman';  /* <----this is fonts for headings */
 }
 
+body {
+    height: 10000px;
+}
 
 .background-color {
     background-color: #AA865B;
 }
 
+
 /* everything above is for the navbar */
+
 
 /* This is for the about us page */
 
@@ -48,11 +48,11 @@ nav {
     border: 1px solid black;
 }
 
-  .image-block img {
+.image-block img {
     width: 50%;
 }
 
-  .picBlock {
+.picBlock {
     display: flex;
     flex-direction: row;
     background-image: url(Images/background.jpg);
@@ -66,10 +66,9 @@ nav {
     align-content: center;
     flex-direction: column;
     margin: 75px;
-    
-
 }
 
+<<<<<<< Updated upstream
 .about-us-body{
     margin-top: 50px;
     margin-left:150px;
@@ -107,4 +106,11 @@ nav {
 .iframeBlock{
     display: flex;
 
+=======
+.flex-columns>div {
+    background-color: aqua;
+    margin: 10px;
+    padding: 20px;
+    font-size: medium;
+>>>>>>> Stashed changes
 }
