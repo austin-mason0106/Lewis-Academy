@@ -25,14 +25,10 @@
     color: #AA865B;
 }
 
-body {
-    height: 10000px;
-}
-
 .background-color {
     background-color: #AA865B;
 }
-/* everything above is for the navbar */
+/* ---------------everything above is for the navbar ---------------*/
 /* This is for the about us page */
 
 .image-block {
@@ -140,3 +136,106 @@ body {
     margin: 0px 20px;
 }
 /* -----------footer is above ----------------- */
+        /* everything below is for the navbar */
+        
+        .bar-at-top {
+            background-color: #5C534A;
+            height: 35px;
+            width: 100%;
+        }
+        
+        .topper {
+            background-color: #392000;
+            margin-top: 55px;
+            height: 160px;
+            display: flex;
+        }
+        
+        .navbar-brand {
+            margin: auto 0;
+        }
+        
+        .logo {
+            width: 140px;
+        }
+        
+        .school-name {
+            color: #AA865B;
+        }
+        
+
+        
+        .background-color {
+            background-color: #AA865B;
+        }
+        /* everything above is for the navbar */
+        /* This is for the about us page */
+        
+        .image-block {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 95%;
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+        
+        .image-block img {
+            width: 50%;
+        }
+        
+        .picBlock {
+            display: flex;
+            flex-direction: row;
+            background-image: url(Images/background.jpg);
+        }
+        
+        .textBlock {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+            margin: 75px;
+        }
+        
+        .about-us-body {
+            margin-top: 50px;
+            margin-left: 150px;
+            margin-right: 150px;
+        }
+        
+        .videoBlock {
+            display: flex;
+            justify-content: center;
+            border: 1px solid black;
+            padding: 20px;
+            margin-left: 55px;
+            margin-right: 55px;
+            margin-top: 100px;
+        }
+        
+        #vidDescription {
+            margin: 25px;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            column-count: 3;
+            padding-left: 30px;
+        }
+        
+        #vidTitle {
+            margin: 25px;
+            display: flex;
+            justify-content: right;
+            padding-right: 235;
+        }
+        
+        .row {
+            display: flex;
+            flex-flow: row wrap;
+        }
+        
+        .columns {
+            padding: 10px;
+            flex: 33%;
+        }
