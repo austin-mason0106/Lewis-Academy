@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="loginStyle.css">
     <script type="text/javascript">
         <!--
-        
             const admin = {id:"admin", email:"admin@lewisprep.com", pass:"admin123"};           //declare member objects
             const parent = {id:"parent", email:"parent@lewisprep.com", pass:"parent123"};
             
@@ -26,12 +25,16 @@
             function validate() {           //write a function that takes user information and returns boolean to enter portal
                 var user = document.frm.user.value;
                 var pass = document.frm.pass.value;
+                
+                if(user == "" || pass == "") {
+                    window.location.href = "#"          //if null inputs, refresh page
 
-                access = ask(user, pass);
-
-                /********insert parent portal html page here**********/
-
-                if(access) window.location.href = "../../Report/reportCard.html";          //if access = true, redirect html page
+                }
+                else{
+                    access = ask(user, pass);
+                    
+                    if(access) window.location.href = "../../Report/reportCard.html";          //if access = true, redirect html page
+                }
                 
             }
 
@@ -43,8 +46,8 @@
                         return true;       //if verified: end loop, and return true; 
                     }
                 }
-                alert("Username or password not valid");        // add error message to screen
                 
+                document.querySelector("#warning").hidden = false;          // search element by id, set hidden state to false
             }
 
         //-->
@@ -114,8 +117,13 @@
                     <table>
                         <tr>
                             <td>
+                                <label id="warning" hidden>Incorrect Username or Password</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 <div class="formDiv">
-                                    <input type="text" name="user" value placeholder="Username/Email" class="input">
+                                    <input type="text" name="user" value placeholder="Enter Username/Email" class="input">
                                 </div>
                             </td>
                         </tr>
@@ -123,7 +131,7 @@
                         <tr>
                             <td>
                                 <div class="formDiv">
-                                    <input type="text" name="pass" placeholder="Password" class="input">
+                                    <input type="text" name="pass" placeholder="Enter Password" class="input">
                                 </div>
                             </td>
                         </tr>

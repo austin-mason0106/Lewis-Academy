@@ -18,36 +18,51 @@
     background-color: white;
     border: 5px solid #AA865B;
     border-radius: 10px;
-    padding: 50px 80px 50px 80px; 
+    padding: 50px 25px 50px 25px; 
 }
 .mainBox1{
-    padding-right: 10px;
+    padding-left: 50px;
     flex: 1;
+    align-items: center;
     justify-content: center;
 }
 .mainBox2{
     flex: 1;
-    /* color: #5C534A; */
 }
 
 .formDiv{}
 
+#warning{
+    color: #712b29;
+    background-color: #f7dddc;
+    border: 2px solid #f4cfce;
+    width: 424px;
+    padding: 0px 5px 0px 100px;
+    margin-bottom: 2px;
+}
+
 .input{
     border: 2px solid rgba(144,144,144,.35);
-    background-color: rgba(144,144,144,.075);
-    border-radius: 5px;
-    padding: 5px 70px 5px 70px;
+    border-radius: 3px;
+    padding: 2px 20px 2px 20px;
+    width: 425px;
 }
 .input:hover{
-    background: gray;
+    background: rgba(144,144,144,.075);
 }
+
 .button{
-    border-radius: 5px;
-    padding: 5px 135px 5px 135px;
-    border: 2px solid rgba(144,144,144,.35);
+    border-radius: 3px;
+    padding: 2px 185px 2px 185px;
+    border: 2px solid #5C534A;
+    background: #5C534A;
+    color: white;
+    
+    
 }
 .button:hover{
-    background: gray;
+    background-color: #AA865B;
+    border: 2px solid #5C534A;
 }
 
 /*****************************************************/
