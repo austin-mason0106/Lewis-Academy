@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="card">
+        <div class="card" onclick="changePage(1)">
             <div class ="student">
                 <img class = "profile" src="reportCardImages/adobestock_165061057_autor_antonioguillem_1.jpeg" >
             </div>
@@ -18,7 +18,7 @@
                 <h1 class="grade" id = "grade1">NA</h1>
             </div>
         </div>
-        <div class="card">
+        <div class="card" onclick="changePage(2)">
             <div class ="student">
                 <img class = "profile" src="reportCardImages/bigstock-Spanish-Male-Student-With-Grou-2862461532-1.jpg" >
             </div>
@@ -27,7 +27,7 @@
                 <h1 class="grade" id = "grade2">NA</h1>
             </div>
         </div>
-        <div class="card">
+        <div class="card" onclick="changePage(3)">
             <div class ="student">
                 <img class = "profile" src="reportCardImages/essay-writting-750x430.jpg" >
             </div>
@@ -36,7 +36,7 @@
                 <h1 class="grade" id = "grade3">NA</h1>
             </div>
         </div>
-        <div class="card">
+        <div class="card" onclick="changePage(4)">
             <div class ="student">
                 <img class = "profile" src="reportCardImages/student-3500990_960_720_opt.jpg" >
             </div>
@@ -46,7 +46,7 @@
             </div>
         </div>
 
-                <div class="card">
+                <div class="card" onclick="changePage(5)">
             <div class ="student">
                 <img class = "profile" src="reportCardImages/successful-college-student-lg.png" >
             </div>
@@ -104,12 +104,18 @@
                 document.getElementById(y).innerHTML = "F";
             }
         }
+        function changePage(x){
+            localStorage.setItem('studentIndex', x-1);
+            console.log(localStorage);
+            window.location.href = 'ReportCard1.html'
 
-        showGrades(1,"grade1");
-        showGrades(2,"grade2");
-        showGrades(3,"grade3");
-        showGrades(4,"grade4");
-        showGrades(5,"grade5");
+        }
+
+        showGrades(0,"grade1");
+        showGrades(1,"grade2");
+        showGrades(2,"grade3");
+        showGrades(3,"grade4");
+        showGrades(4,"grade5");
         </script>
 </body>
 </html>

@@ -18,42 +18,42 @@
         </tr>
         <tr>
             <td>Math</td>
-            <td id = 'Math'>NA</td>
+            <td id = 'MathGrade'>NA</td>
             <td><input type="number" id="MathGradeTemp" name="Temperay Math Grade" min="0" max="100" step="10" value="0"></td>
         </tr>
         <tr>
             <td>Reading</td>
-            <td id = 'Reading'>NA</td>
+            <td id = 'ReadingGrade'>NA</td>
             <td><input type="number" id="ReadingGradeTemp" name="Temperay Reading Grade" min="0" max="100" step="10" value="0"></td>
         </tr>
         <tr>
             <td>Science</td>
-            <td id = 'Science'>NA</td>
+            <td id = 'ScienceGrade'>NA</td>
             <td><input type="number" id="ScienceGradeTemp" name="Temperay Science Grade" min="0" max="100" step="10" value="0"></td>
         </tr>
         <tr>
             <td>Social Study</td>
-            <td id = 'Social Study'>NA</td>
+            <td id = 'SSGrade'>NA</td>
             <td><input type="number" id="SSGradeTemp" name="Temperay Social Study Grade" min="0" max="100" step="10" value="0"></td>
         </tr>
         <tr>
             <td>Physical Education</td>
-            <td id = 'Physical Education'>NA</td>
+            <td id = 'PEGrade'>NA</td>
             <td><input type="number" id="PEGradeTemp" name="Temperay Physical Education Grade" min="0" max="100" step="10" value="0"></td>
         </tr>
         <tr>
             <td>Elective One</td>
-            <td id = 'Elective One'>NA</td>
+            <td id = 'E1Grade'>NA</td>
             <td><input type="number" id="E1GradeTemp" name="Temperay Elective One Grade" min="0" max="100" step="10" value="0"></td>
         </tr>
         <tr>
             <td>Elective Two</td>
-            <td id = 'Elective Two'>NA</td>
+            <td id = 'E2Grade'>NA</td>
             <td><input type="number" id="E2GradeTemp" name="Temperay Elective Two Grade" min="0" max="100" step="10" value="0"></td>
         </tr>
         <tr>
             <td>Average Grade</td>
-            <td id = 'Average Grade'>NA</td>
+            <td id = 'AverageGrade'>NA</td>
             <td id = 'AverageGradeTemp'>NA</td>
         </tr>
 
@@ -61,7 +61,30 @@
     <button id="myBtn">Calulate Temp Grade</button>
 
     <script>
-        
+                let grades = [[97,89,76,65,57,90,67],
+                    [70,50,34,63,77,43,53],
+                    [89,77,79,68,57,80,75],
+                    [75,88,98,95,87,90,97],
+                    [69,70,76,65,77,90,67],
+                    [90,89,76,90,85,90,89]];
+
+                let imageLink =["reportCardImages/adobestock_165061057_autor_antonioguillem_1.jpeg",
+                "reportCardImages/bigstock-Spanish-Male-Student-With-Grou-2862461532-1.jpg",
+                "reportCardImages/essay-writting-750x430.jpg",
+                "reportCardImages/student-3500990_960_720_opt.jpg",
+                "reportCardImages/successful-college-student-lg.png"]
+
+                const index = localStorage.getItem('studentIndex');
+                
+                document.getElementById("profile").src=imageLink[index];
+                
+                function sumArray(array) {
+            let sum = 0; 
+            for (let i = 0; i < array.length; i += 1) {
+                sum += array[i];
+            }
+            return sum;
+        }
         //this is where we pull all the ids from the inputs and calulate the temporary grade
             function tempGrade() {
             //I had to convert values into numbers because the function returns a string
@@ -93,6 +116,142 @@
 
         //this assigns the function for the temporary grade calulator
         document.getElementById("myBtn").onclick = tempGrade;
+
+        function showGrades(x){
+
+                if(grades[x][0]>= 90){
+                    document.getElementById("MathGrade").innerHTML = "A";
+                }
+                else if(grades[x][0]>= 80){
+                    document.getElementById("MathGrade").innerHTML = "B";
+                }
+                else if(grades[x][0]>= 70){
+                    document.getElementById("MathGrade").innerHTML = "C";
+                }
+                else if(grades[x][0]>= 65){
+                    document.getElementById("MathGrade").innerHTML = "D";
+                }
+                else {
+                    document.getElementById("MathGrade").innerHTML = "F";
+                }
+
+                if(grades[x][1]>= 90){
+                    document.getElementById("ReadingGrade").innerHTML = "A";
+                }
+                else if(grades[x][1]>= 80){
+                    document.getElementById("ReadingGrade").innerHTML = "B";
+                }
+                else if(grades[x][1]>= 70){
+                    document.getElementById("ReadingGrade").innerHTML = "C";
+                }
+                else if(grades[x][1]>= 65){
+                    document.getElementById("ReadingGrade").innerHTML = "D";
+                }
+                else {
+                    document.getElementById("ReadingGrade").innerHTML = "F";
+                }
+
+                if(grades[x][2]>= 90){
+                    document.getElementById("ScienceGrade").innerHTML = "A";
+                }
+                else if(grades[x][2]>= 80){
+                    document.getElementById("ScienceGrade").innerHTML = "B";
+                }
+                else if(grades[x][2]>= 70){
+                    document.getElementById("ScienceGrade").innerHTML = "C";
+                }
+                else if(grades[x][2]>= 65){
+                    document.getElementById("ScienceGrade").innerHTML = "D";
+                }
+                else {
+                    document.getElementById("ScienceGrade").innerHTML = "F";
+                }
+
+                if(grades[x][3]>= 90){
+                    document.getElementById("SSGrade").innerHTML = "A";
+                }
+                else if(grades[x][3]>= 80){
+                    document.getElementById("SSGrade").innerHTML = "B";
+                }
+                else if(grades[x][3]>= 70){
+                    document.getElementById("SSGrade").innerHTML = "C";
+                }
+                else if(grades[x][3]>= 65){
+                    document.getElementById("SSGrade").innerHTML = "D";
+                }
+                else {
+                    document.getElementById("SSGrade").innerHTML = "F";
+                }
+
+                if(grades[x][4]>= 90){
+                    document.getElementById("PEGrade").innerHTML = "A";
+                }
+                else if(grades[x][4]>= 80){
+                    document.getElementById("PEGrade").innerHTML = "B";
+                }
+                else if(grades[x][4]>= 70){
+                    document.getElementById("PEGrade").innerHTML = "C";
+                }
+                else if(grades[x][4]>= 65){
+                    document.getElementById("PEGrade").innerHTML = "D";
+                }
+                else {
+                    document.getElementById("PEGrade").innerHTML = "F";
+                }
+
+                if(grades[x][5]>= 90){
+                    document.getElementById("E1Grade").innerHTML = "A";
+                }
+                else if(grades[x][5]>= 80){
+                    document.getElementById("E1Grade").innerHTML = "B";
+                }
+                else if(grades[x][5]>= 70){
+                    document.getElementById("E1Grade").innerHTML = "C";
+                }
+                else if(grades[x][5]>= 65){
+                    document.getElementById("E1Grade").innerHTML = "D";
+                }
+                else {
+                    document.getElementById("E1Grade").innerHTML = "F";
+                }
+
+                if(grades[x][6]>= 90){
+                    document.getElementById("E2Grade").innerHTML = "A";
+                }
+                else if(grades[x][6]>= 80){
+                    document.getElementById("E2Grade").innerHTML = "B";
+                }
+                else if(grades[x][6]>= 70){
+                    document.getElementById("E2Grade").innerHTML = "C";
+                }
+                else if(grades[x][6]>= 65){
+                    document.getElementById("E2Grade").innerHTML = "D";
+                }
+                else {
+                    document.getElementById("E2Grade").innerHTML = "F";
+                }
+
+                let AverageGrade= sumArray(grades[x])/7;
+
+                if(AverageGrade>= 90){
+                    document.getElementById("AverageGrade").innerHTML = "A";
+                }
+                else if(AverageGrade>= 80){
+                    document.getElementById("AverageGrade").innerHTML = "B";
+                }
+                else if(AverageGrade>= 70){
+                    document.getElementById("AverageGrade").innerHTML = "C";
+                }
+                else if(AverageGrade>= 65){
+                    document.getElementById("AverageGrade").innerHTML = "D";
+                }
+                else {
+                    document.getElementById("AverageGrade").innerHTML = "F";
+                }
+        }
+        showGrades(index);
+
+
     </script>
 </body>
 </html>
