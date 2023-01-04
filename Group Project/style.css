@@ -99,6 +99,74 @@
     font-size: medium;
 }
 
+/* ---------------"who we are" page below------------------ */
+
+.who_we_are
+{
+    display:flex;
+    
+}
+
+.who_we_are_body
+{
+    background-color: #DDD9D5
+}
+
+.curriculum
+{
+    border-radius:25px;
+    outline-offset: 4px;
+    justify-content:center;
+    margin: 5% 10% auto 10%;
+}
+
+.curriculum h1 
+{
+    text-shadow: 3px 3px 3px #392000;
+    color:#5C534A;
+    margin-bottom:30px;
+}
+.curriculum a
+{   
+    color: #5C534A
+    
+}
+.curriculum a:hover
+{
+    color: #AA865B;
+    text-shadow: 1px 1px 1px #392000;
+}
+
+.who_we_are_pics
+{
+    display:flex;
+    margin-bottom:86px;
+    justify-content:space-evenly;
+    padding: 5%;
+
+
+}
+
+.who_we_are_pics figure
+{
+    justify-content:space-between;
+    width:40%;
+    height:80vh;
+}
+
+.who_we_are_pics img
+{
+    object-fit: fill;
+    width:100%;
+    height:100%;
+    border-radius:25%;
+}
+
+
+
+/*----------------"who we are" page above------------------*/
+
+
 /* ----------------footer is below ---------------- */
 
 .footer {
