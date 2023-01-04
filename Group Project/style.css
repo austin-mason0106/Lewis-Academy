@@ -108,22 +108,16 @@
     color: #AA865B;
     display: flex;
     flex-direction: column;
-<<<<<<< Updated upstream
-=======
     align-content: center;
     align-items: center;
->>>>>>> Stashed changes
     background-color: #392000;
     padding: 8px 0 5px 0px;
     border: solid;
     flex-basis: 100vw;
-<<<<<<< Updated upstream
     position: fixed;
     bottom: 0;
     min-width: 100%;
-=======
     margin-top: 20px;
->>>>>>> Stashed changes
     font-family: Georgia, 'Times New Roman', Arial;
 }
 
@@ -151,7 +145,6 @@
 
 
 /* -----------footer is above ----------------- */
-<<<<<<< Updated upstream
         /* This is for the about us page */
         
         .image-block {
@@ -223,7 +216,6 @@
             flex: 33%;
             
         }
-=======
 
 
 /* everything below is for the navbar */
@@ -351,4 +343,3 @@ body {
     margin-left: 5%;
     margin-right: 5%;
 }
->>>>>>> Stashed changes
