@@ -212,6 +212,12 @@
 
 
 /* -----------footer is above ----------------- */
+
+
+/* duplicate properties below */
+
+
+
         /* This is for the about us page */
         
         .image-block {
@@ -409,3 +415,6 @@ body {
     margin-left: 5%;
     margin-right: 5%;
 }
+
+
+/* duplicate code above */
