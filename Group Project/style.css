@@ -28,7 +28,11 @@
 .background-color {
     background-color: #AA865B;
 }
+
+
 /* ---------------everything above is for the navbar ---------------*/
+
+
 /* This is for the about us page */
 
 .image-block {
@@ -97,6 +101,74 @@
     font-size: medium;
 }
 
+/* ---------------"who we are" page below------------------ */
+
+.who_we_are
+{
+    display:flex;
+    
+}
+
+.who_we_are_body
+{
+    background-color: #DDD9D5
+}
+
+.curriculum
+{
+    border-radius:25px;
+    outline-offset: 4px;
+    justify-content:center;
+    margin: 5% 10% auto 10%;
+}
+
+.curriculum h1 
+{
+    text-shadow: 3px 3px 3px #392000;
+    color:#5C534A;
+    margin-bottom:30px;
+}
+.curriculum a
+{   
+    color: #5C534A
+    
+}
+.curriculum a:hover
+{
+    color: #AA865B;
+    text-shadow: 1px 1px 1px #392000;
+}
+
+.who_we_are_pics
+{
+    display:flex;
+    margin-bottom:86px;
+    justify-content:space-evenly;
+    padding: 5%;
+
+
+}
+
+.who_we_are_pics figure
+{
+    justify-content:space-between;
+    width:40%;
+    height:80vh;
+}
+
+.who_we_are_pics img
+{
+    object-fit: fill;
+    width:100%;
+    height:100%;
+    border-radius:25%;
+}
+
+
+
+/*----------------"who we are" page above------------------*/
+
+
 /* ----------------footer is below ---------------- */
 
 .footer {
@@ -104,71 +176,48 @@
     display: flex;
     flex-direction: column;
     align-content: center;
-    align-items:center;
+    align-items: center;
     background-color: #392000;
-    padding: 20px 0;
+    padding: 8px 0 5px 0px;
     border: solid;
     flex-basis: 100vw;
-    margin-top:20px;
+    position: fixed;
+    bottom: 0;
+    min-width: 100%;
+    margin-top: 20px;
     font-family: Georgia, 'Times New Roman', Arial;
 }
 
-.footer p{
-    align-self:center;
+.footer p {
+    align-self: center;
     padding: 0 0;
     margin: 2px 0;
-    text-align:center;
-   
+    text-align: center;
 }
 
 .footer-link-list {
     display: flex;
     justify-content: center;
-    margin: 0px 0 10px 0;
+    margin: 0px 0 5px 0;
 }
 
 .footer a {
     color: #AA865B;
     /* text-decoration:none; */
 }
-    
-.footer li{
+
+.footer li {
     margin: 0px 20px;
 }
-/* -----------footer is above ----------------- */
-        /* everything below is for the navbar */
-        
-        .bar-at-top {
-            background-color: #5C534A;
-            height: 35px;
-            width: 100%;
-        }
-        
-        .topper {
-            background-color: #392000;
-            margin-top: 55px;
-            height: 160px;
-            display: flex;
-        }
-        
-        .navbar-brand {
-            margin: auto 0;
-        }
-        
-        .logo {
-            width: 140px;
-        }
-        
-        .school-name {
-            color: #AA865B;
-        }
-        
 
-        
-        .background-color {
-            background-color: #AA865B;
-        }
-        /* everything above is for the navbar */
+
+/* -----------footer is above ----------------- */
+
+
+/* duplicate properties below */
+
+
+
         /* This is for the about us page */
         
         .image-block {
@@ -238,4 +287,135 @@
         .columns {
             padding: 10px;
             flex: 33%;
+            
         }
+
+
+/* everything below is for the navbar */
+
+.bar-at-top {
+    background-color: #5C534A;
+    height: 35px;
+    width: 100%;
+}
+
+.topper {
+    background-color: #392000;
+    margin-top: 55px;
+    height: 160px;
+    display: flex;
+}
+
+.navbar-brand {
+    margin: auto 0;
+}
+
+.logo {
+    width: 140px;
+}
+
+.school-name {
+    color: #AA865B;
+}
+
+body {
+    height: 10000px;
+}
+
+.background-color {
+    background-color: #AA865B;
+}
+
+
+/* everything above is for the navbar */
+
+
+/* This is for the about us page */
+
+.image-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 95%;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.image-block img {
+    width: 50%;
+}
+
+.picBlock {
+    display: flex;
+    flex-direction: row;
+    background-image: url(Images/background.jpg);
+}
+
+.textBlock {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin: 75px;
+}
+
+.about-us-body {
+    margin-top: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.videoBlock {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 20px;
+    margin-left: 55px;
+    margin-right: 55px;
+    margin-top: 100px;
+}
+
+#vidDescription {
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    column-count: 3;
+    padding-left: 30px;
+}
+
+#vidTitle {
+    margin: 25px;
+    display: flex;
+    justify-content: right;
+    padding-right: 235;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    flex: 1;
+    width: 100%;
+}
+
+.columns {
+    padding: 10px;
+    flex: 3;
+    border: 1px solid;
+    margin: 15px;
+    justify-content: space-evenly;
+    padding: 10px;
+    width: 100%;
+}
+
+.column-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+/* duplicate code above */
