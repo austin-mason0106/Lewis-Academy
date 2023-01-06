@@ -75,9 +75,11 @@
                 "reportCardImages/successful-college-student-lg.png"]
 
                 const index = localStorage.getItem('studentIndex');
-                
+                const name = localStorage.getItem('studentName');
+
                 document.getElementById("profile").src=imageLink[index];
-                
+                document.getElementById("name").innerHTML = name;
+
                 function sumArray(array) {
             let sum = 0; 
             for (let i = 0; i < array.length; i += 1) {
