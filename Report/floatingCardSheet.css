@@ -48,22 +48,20 @@ body {
     width: 100%;
     float: left;
     display: flex;
-    
-
-    
+    overflow: scroll; 
     
 }
 
-.card{
+#card{
     min-height: 60px;
-    width: 400px;
+    width: 500px;
     border-radius: 20px;
     background-color: bisque;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 
     0 0 50px rgba(0, 0, 0, 0.2);
     padding: 10px 20px;
     margin: 0px 50px 0px 50px;
-    text-align: center;
+    
 }
 
 .info{
