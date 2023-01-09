@@ -9,10 +9,9 @@
 
 .topper {
     background-color: #392000;
-    margin-top: 80px;
     height: 160px;
     display: flex;
-    padding-top:5px;
+    margin-top:62px;
 }
 
 .navbar-brand {
@@ -301,40 +300,7 @@
         }
 
 
-/* everything below is for the navbar */
 
-.bar-at-top {
-    background-color: #5C534A;
-    height: 35px;
-    width: 100%;
-}
-
-.topper {
-    background-color: #392000;
-    margin-top: 55px;
-    height: 160px;
-    display: flex;
-}
-
-.navbar-brand {
-    margin: auto 0;
-}
-
-.logo {
-    width: 140px;
-}
-
-.school-name {
-    color: #AA865B;
-}
-
-
-.background-color {
-    background-color: #AA865B;
-}
-
-
-/* everything above is for the navbar */
 
 
 /* This is for the about us page */
