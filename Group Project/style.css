@@ -373,13 +373,18 @@
 }
 
 .columns {
-    padding: 10px;
+    padding: 10%;
     flex: 3;
     border: 1px solid;
     margin: 15px;
-    justify-content: space-evenly;
+    justify-content: center;
     padding: 10px;
     width: 100%;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
 }
 
 .column-container {
@@ -390,5 +395,14 @@
     margin-right: 5%;
 }
 
+.calendarBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 
+
+}
 /* duplicate code above */
