@@ -1,3 +1,11 @@
+/* -----------------Body styles below------------- */
+
+body {
+    background-color: #DDD9D5
+}
+
+/* ----------------body styles above------------------- */
+
 /* everything below is for the navbar */
 
 .bar-at-top {
@@ -117,10 +125,7 @@
     
 }
 
-.who_we_are_body
-{
-    background-color: #DDD9D5
-}
+
 
 .curriculum
 {
