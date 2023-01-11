@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reportCard1CSS.css">
+    <!------- make sure booststrap 5.2.3 is the version included-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- This is where the nav bar will go- Zeb -->
+    <nav class="navbar navbar-expand-lg background-color fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../Group Project/Who-we-are.html">Who we are</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Group Project/About-us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Group Project/Contact Page/Index.html">Apply Now</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Parent Portal
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="../Group Project/login/login.html">Log In</a></li>
+                            <li><a class="dropdown-item" href="../Group Project/Contact Page/Index.html">Sign up</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+                        </li> -->
+                </ul>
+
+                <!-- <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> -->
+            </div>
+        </div>
+    </nav>
+    <div class="topper container-fluid">
+        <a class="navbar-brand" href="../Group Project/index.html">
+            <img class="img-thumbnail logo" src="../Group Project/Images/LPALogo.png" alt="school logo">
+            <span class="school-name fs-3 text">Lewis Prepatory Academy</span>
+        </a>
+    </div>
+    <!--------navbar and topper are above-->
+    <div id="body1">
+        <h1 id="name" class="center">Student Name</h1>
+        <img id="profile" class="center"
+            src="reportCardImages/bigstock-Spanish-Male-Student-With-Grou-2862461532-1.jpg">
+        <table>
+            <tr>
+                <td>Subject</td>
+                <td>Grade</td>
+                <td>Temporary Grade</td>
+            </tr>
+            <tr>
+                <td>Math</td>
+                <td id='MathGrade'>NA</td>
+                <td><input type="number" id="MathGradeTemp" name="Temperay Math Grade" min="0" max="100" step="10"
+                        value="0"></td>
+            </tr>
+            <tr>
+                <td>Reading</td>
+                <td id='ReadingGrade'>NA</td>
+                <td><input type="number" id="ReadingGradeTemp" name="Temperay Reading Grade" min="0" max="100" step="10"
+                        value="0"></td>
+            </tr>
+            <tr>
+                <td>Science</td>
+                <td id='ScienceGrade'>NA</td>
+                <td><input type="number" id="ScienceGradeTemp" name="Temperay Science Grade" min="0" max="100" step="10"
+                        value="0"></td>
+            </tr>
+            <tr>
+                <td>Social Study</td>
+                <td id='SSGrade'>NA</td>
+                <td><input type="number" id="SSGradeTemp" name="Temperay Social Study Grade" min="0" max="100" step="10"
+                        value="0"></td>
+            </tr>
+            <tr>
+                <td>Physical Education</td>
+                <td id='PEGrade'>NA</td>
+                <td><input type="number" id="PEGradeTemp" name="Temperay Physical Education Grade" min="0" max="100"
+                        step="10" value="0"></td>
+            </tr>
+            <tr>
+                <td>Elective One</td>
+                <td id='E1Grade'>NA</td>
+                <td><input type="number" id="E1GradeTemp" name="Temperay Elective One Grade" min="0" max="100" step="10"
+                        value="0"></td>
+            </tr>
+            <tr>
+                <td>Elective Two</td>
+                <td id='E2Grade'>NA</td>
+                <td><input type="number" id="E2GradeTemp" name="Temperay Elective Two Grade" min="0" max="100" step="10"
+                        value="0"></td>
+            </tr>
+            <tr>
+                <td>Average Grade</td>
+                <td id='AverageGrade'>NA</td>
+                <td id='AverageGradeTemp'>NA</td>
+            </tr>
+
+        </table>
+        <button id="myBtn" class="center">Calulate Temp Grade</button>
+    </div>
+
+    <!-----footer is below-->
+    <footer class="footer">
+        <ul class="footer-link-list">
+            <li><a target="_blank" href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Reschedule Policy</a></li>
+            <li><a href="#">School Lottery Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <p>Address: 925 Arch St, Suite 0100110101101101, Philadelphia, PA 19107 United States. Phone No:844-LEARN-66
+            (888-532-7666)</p>
+        <p>© 2020-2022 - Lewis Academy. All Rights Reserved. All parents are responsible for their children.</p>
+    </footer>
+    <!------footer is above-->
+
+    <script>
+        let grades = [[97, 89, 76, 65, 57, 90, 67],
+        [70, 50, 34, 63, 77, 43, 53],
+        [89, 77, 79, 68, 57, 80, 75],
+        [75, 88, 98, 95, 87, 90, 97],
+        [69, 70, 76, 65, 77, 90, 67],
+        [90, 89, 76, 90, 85, 90, 89]];
+
+        let imageLink = ["reportCardImages/adobestock_165061057_autor_antonioguillem_1.jpeg",
+            "reportCardImages/bigstock-Spanish-Male-Student-With-Grou-2862461532-1.jpg",
+            "reportCardImages/essay-writting-750x430.jpg",
+            "reportCardImages/student-3500990_960_720_opt.jpg",
+            "reportCardImages/successful-college-student-lg.png"]
+
+        const index = localStorage.getItem('studentIndex');
+        const name = localStorage.getItem('studentName');
+
+        document.getElementById("profile").src = imageLink[index];
+        document.getElementById("name").innerHTML = name;
+
+        function sumArray(array) {
+            let sum = 0;
+            for (let i = 0; i < array.length; i += 1) {
+                sum += array[i];
+            }
+            return sum;
+        }
+        //this is where we pull all the ids from the inputs and calulate the temporary grade
+        function tempGrade() {
+            //I had to convert values into numbers because the function returns a string
+            let tempAverageGrade = (Number(document.getElementById("MathGradeTemp").value) +
+                Number(document.getElementById("ReadingGradeTemp").value) +
+                Number(document.getElementById("SSGradeTemp").value) +
+                Number(document.getElementById("ScienceGradeTemp").value) +
+                Number(document.getElementById("PEGradeTemp").value) +
+                Number(document.getElementById("E1GradeTemp").value) +
+                Number(document.getElementById("E2GradeTemp").value)) / 7;
+
+
+            if (tempAverageGrade >= 90) {
+                document.getElementById("AverageGradeTemp").innerHTML = "A";
+            }
+            else if (tempAverageGrade >= 80) {
+                document.getElementById("AverageGradeTemp").innerHTML = "B";
+            }
+            else if (tempAverageGrade >= 70) {
+                document.getElementById("AverageGradeTemp").innerHTML = "C";
+            }
+            else if (tempAverageGrade >= 65) {
+                document.getElementById("AverageGradeTemp").innerHTML = "D";
+            }
+            else {
+                document.getElementById("AverageGradeTemp").innerHTML = "F";
+            }
+        }
+
+        //this assigns the function for the temporary grade calulator
+        document.getElementById("myBtn").onclick = tempGrade;
+
+        function showGrades(x) {
+
+            if (grades[x][0] >= 90) {
+                document.getElementById("MathGrade").innerHTML = "A";
+            }
+            else if (grades[x][0] >= 80) {
+                document.getElementById("MathGrade").innerHTML = "B";
+            }
+            else if (grades[x][0] >= 70) {
+                document.getElementById("MathGrade").innerHTML = "C";
+            }
+            else if (grades[x][0] >= 65) {
+                document.getElementById("MathGrade").innerHTML = "D";
+            }
+            else {
+                document.getElementById("MathGrade").innerHTML = "F";
+            }
+
+            if (grades[x][1] >= 90) {
+                document.getElementById("ReadingGrade").innerHTML = "A";
+            }
+            else if (grades[x][1] >= 80) {
+                document.getElementById("ReadingGrade").innerHTML = "B";
+            }
+            else if (grades[x][1] >= 70) {
+                document.getElementById("ReadingGrade").innerHTML = "C";
+            }
+            else if (grades[x][1] >= 65) {
+                document.getElementById("ReadingGrade").innerHTML = "D";
+            }
+            else {
+                document.getElementById("ReadingGrade").innerHTML = "F";
+            }
+
+            if (grades[x][2] >= 90) {
+                document.getElementById("ScienceGrade").innerHTML = "A";
+            }
+            else if (grades[x][2] >= 80) {
+                document.getElementById("ScienceGrade").innerHTML = "B";
+            }
+            else if (grades[x][2] >= 70) {
+                document.getElementById("ScienceGrade").innerHTML = "C";
+            }
+            else if (grades[x][2] >= 65) {
+                document.getElementById("ScienceGrade").innerHTML = "D";
+            }
+            else {
+                document.getElementById("ScienceGrade").innerHTML = "F";
+            }
+
+            if (grades[x][3] >= 90) {
+                document.getElementById("SSGrade").innerHTML = "A";
+            }
+            else if (grades[x][3] >= 80) {
+                document.getElementById("SSGrade").innerHTML = "B";
+            }
+            else if (grades[x][3] >= 70) {
+                document.getElementById("SSGrade").innerHTML = "C";
+            }
+            else if (grades[x][3] >= 65) {
+                document.getElementById("SSGrade").innerHTML = "D";
+            }
+            else {
+                document.getElementById("SSGrade").innerHTML = "F";
+            }
+
+            if (grades[x][4] >= 90) {
+                document.getElementById("PEGrade").innerHTML = "A";
+            }
+            else if (grades[x][4] >= 80) {
+                document.getElementById("PEGrade").innerHTML = "B";
+            }
+            else if (grades[x][4] >= 70) {
+                document.getElementById("PEGrade").innerHTML = "C";
+            }
+            else if (grades[x][4] >= 65) {
+                document.getElementById("PEGrade").innerHTML = "D";
+            }
+            else {
+                document.getElementById("PEGrade").innerHTML = "F";
+            }
+
+            if (grades[x][5] >= 90) {
+                document.getElementById("E1Grade").innerHTML = "A";
+            }
+            else if (grades[x][5] >= 80) {
+                document.getElementById("E1Grade").innerHTML = "B";
+            }
+            else if (grades[x][5] >= 70) {
+                document.getElementById("E1Grade").innerHTML = "C";
+            }
+            else if (grades[x][5] >= 65) {
+                document.getElementById("E1Grade").innerHTML = "D";
+            }
+            else {
+                document.getElementById("E1Grade").innerHTML = "F";
+            }
+
+            if (grades[x][6] >= 90) {
+                document.getElementById("E2Grade").innerHTML = "A";
+            }
+            else if (grades[x][6] >= 80) {
+                document.getElementById("E2Grade").innerHTML = "B";
+            }
+            else if (grades[x][6] >= 70) {
+                document.getElementById("E2Grade").innerHTML = "C";
+            }
+            else if (grades[x][6] >= 65) {
+                document.getElementById("E2Grade").innerHTML = "D";
+            }
+            else {
+                document.getElementById("E2Grade").innerHTML = "F";
+            }
+
+            let AverageGrade = sumArray(grades[x]) / 7;
+
+            if (AverageGrade >= 90) {
+                document.getElementById("AverageGrade").innerHTML = "A";
+            }
+            else if (AverageGrade >= 80) {
+                document.getElementById("AverageGrade").innerHTML = "B";
+            }
+            else if (AverageGrade >= 70) {
+                document.getElementById("AverageGrade").innerHTML = "C";
+            }
+            else if (AverageGrade >= 65) {
+                document.getElementById("AverageGrade").innerHTML = "D";
+            }
+            else {
+                document.getElementById("AverageGrade").innerHTML = "F";
+            }
+        }
+        showGrades(index);
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <!----- must include this script for drop down parent portal to work in nav bar-->
+</body>
+
+</html>

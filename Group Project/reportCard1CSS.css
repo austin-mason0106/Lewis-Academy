@@ -1,0 +1,101 @@
+/* everything below is for the navbar */
+
+.bar-at-top {
+  background-color: #5C534A;
+  height: 35px;
+  width: 100%;
+}
+
+.topper {
+  background-color: #392000;
+  margin-top: 55px;
+  height: 160px;
+  display: flex;
+  margin-bottom:20px;
+}
+
+.navbar-brand {
+  margin: auto 0;
+}
+
+.logo {
+  width: 140px;
+}
+
+.school-name {
+  color: #AA865B;
+}
+
+.background-color {
+  background-color: #AA865B;
+}
+
+
+/* ---------------everything above is for the navbar ---------------*/
+
+table, th, td {
+    border:1px solid black;
+  }
+
+  .center{
+    align-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 0 15px 0px;
+    display: block;
+
+  }
+
+  #profile{
+    width : 450px;
+    height: 300px;
+  }
+  table{
+    margin-left: auto;
+    margin-right: auto;
+  }
+/* ----------------footer is below ---------------- */
+
+
+.footer {
+  color: #AA865B;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  background-color: #392000;
+  padding: 8px 0 5px 0px;
+  border: solid;
+  flex-basis: 100vw;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 20px;
+  font-family: Georgia, 'Times New Roman', Arial;
+}
+
+.footer p {
+  align-self: center;
+  padding: 0 0;
+  margin: 2px 0;
+  text-align: center;
+}
+
+.footer-link-list {
+  display: flex;
+  justify-content: center;
+  margin: 0px 0 5px 0;
+}
+
+.footer a {
+  color: #AA865B;
+  /* text-decoration:none; */
+}
+
+.footer li {
+  margin: 0px 20px;
+}
+
+
+/* -----------footer is above ----------------- */
