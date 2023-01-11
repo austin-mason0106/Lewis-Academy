@@ -1,38 +1,132 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title> Calendar =</title>
-    <link rel="stylesheet" href="style.css">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google Font Link for Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <p class="current-date"></p>
-        <div class="icons">
-          <span id="prev" class="material-symbols-rounded">chevron_left</span>
-          <span id="next" class="material-symbols-rounded">chevron_right</span>
+    <!------- make sure booststrap 5.2.3 is the version included-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Lewis Prep Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body-flex">
+    <!-- This is where the nav bar will go- Zeb -->
+    <nav class="navbar navbar-expand-lg background-color fs-5 fixed-top font-weight-bold">
+        <div class="container-fluid">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/Group Project/Who-we-are.html">Who we are</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Group Project/About-us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Group Project/Contact Page/Index.html">Apply Now</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle w3-large" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Parent Portal
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="login/login.html">Log In</a></li>
+                                <li><a class="dropdown-item" href="#">Sign up</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+                        </li> -->
+                </ul>
+
+                <!-- <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> -->
+            </div>
         </div>
-      </header>
-      <div class="calendar">
-        <ul class="weeks">
-          <li>Sun</li>
-          <li>Mon</li>
-          <li>Tue</li>
-          <li>Wed</li>
-          <li>Thu</li>
-          <li>Fri</li>
-          <li>Sat</li>
-        </ul>
-        <ul class="days"></ul>
-      </div>
+    </nav>
+    <div class="topper container-fluid">
+        <a class="navbar-brand" href="/Group Project/index.html">
+            <img class="img-thumbnail logo" src="Images/LPALogo.png" alt="school logo">
+            <span class="school-name fs-1 text">Lewis Preparatory Academy</span>
+        </a>
     </div>
+    <!--------navbar and topper are above-->
+    <div class="top-bar">
+
+        
+        <div class="logoBox">
+            <img src="Images/LPALogo.png" alt="Timmy the Raptor" height="100" width="100">
+        </div>
+    </div>
+    
+    <!-- This is the block of code that separates the nav and main body, contains
+        logo and school name Austin&Alexis-->
+
+
+        <div class="schoolNameBox">
+
+            <h1>Lewis Academy</h1>
+
+        </div>
+
+
 
     
-    
-  </body>
+
+    <div class="calendarBox">
+        <iframe width="1176" height="800" src="/Group Project/SchoolCalendar.html" title="school calendar">School Calendar</iframe>
+    </div>
+
+
+
+
+    <!-- This is where the three columns go - Craig -->
+    <div class="column-container">
+        <div class="row">
+            <div class="columns">
+                <h1>Apply Now</h1>
+                <p>school is cool Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore provident sunt, non similique reiciendis velit laboriosam aspernatur perspiciatis, eveniet maxime enim placeat quis labore esse saepe voluptatibus quod totam
+                    ad.
+                </p>
+            </div>
+            <div class="columns">
+                <h1>Events</h1>
+                <p>teaching is fundamental Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quisquam, autem laboriosam minima modi quam ipsum vel repudiandae non eaque illo esse quae est quidem ducimus consectetur molestias. Explicabo, vero!</p>
+                <button type="button" class="btn btn-secondary btn-lg">See All Events</button>
+            </div>
+            <div class="columns">
+                <h1>STEM </h1>
+                <p>let's go Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum accusamus illo ea blanditiis voluptate eius at omnis excepturi, cupiditate est possimus, laboriosam distinctio magnam aspernatur tempora? Recusandae quasi sint totam.</p>
+            </div>
+        </div>
+    </div>
+    <!-----footer is below-->
+    <footer class="footer">
+        <ul class="footer-link-list">
+            <li><a target="_blank" href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Reschedule Policy</a></li>
+            <li><a href="#">School Lottery Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <p>Address: 925 Arch St, Suite 0100110101101101, Philadelphia, PA 19107 United States. Phone No:844-LEARN-66 (888-532-7666)</p>
+        <p>© 2020-2022 - Lewis Academy. All Rights Reserved. All parents are responsible for their children.</p>
+    </footer>
+    <!------footer is above-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!----- must include this script for drop down parent portal to work in nav bar-->
+</body>
+
 </html>
