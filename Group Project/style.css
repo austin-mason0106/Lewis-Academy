@@ -1,10 +1,27 @@
 /* -----------------Body styles below------------- */
 
 body {
-    background-color: #DDD9D5
+    background-color: #DDD9D5;
+    position:relative;
+    min-height: 100vh;
+    padding-bottom:120px;
+    
 }
 
 /* ----------------body styles above------------------- */
+
+/* ------------page containers below---------------- */
+
+/* .body_wrapper{
+    position:relative;
+    min-height:100vh;
+}
+
+.content_wrapper{
+    padding-bottom: 120px;
+} */
+
+/* --------------page containers above------------------ */
 
 /* everything below is for the navbar */
 
@@ -137,8 +154,6 @@ body {
     
 }
 
-
-
 .curriculum
 {
     border-radius:25px;
@@ -207,9 +222,9 @@ body {
     padding: 8px 0 5px 0px;
     border: solid;
     flex-basis: 100vw;
-    position: relative;
+    position: absolute;
     bottom: 0;
-    width: 100%;
+    width:100%;
     font-family: Georgia, 'Times New Roman', Arial;
     font-size:1.2rem;
 }
