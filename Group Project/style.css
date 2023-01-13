@@ -43,6 +43,18 @@ body {
 
 /* ---------------Calendar Page below ---------------*/
 
+.calendarBox{
+    display: flex;
+    justify-content:center;
+    margin-bottom:20px;
+    height:600px;
+}
+
+.calendarBox iframe{
+    height:100%;
+    width: 75%;
+}
+
 
 
 
@@ -400,14 +412,5 @@ body {
     margin-right: 5%;
 }
 
-.calendarBox{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
 
-
-}
 /* duplicate code above */
