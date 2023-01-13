@@ -12,7 +12,7 @@ body{
   padding: 0 10px;
   justify-content: center;
   min-height: 100vh;
-  background: #7eb659;
+  background-color: #DDD9D5
   gap: 10px;
   
 }
@@ -99,7 +99,7 @@ header .current-date{
   transform: translate(-50%, -50%);
 }
 .days li.active::before{
-  background: #59b659;
+  background-color: #AA865B;
 }
 .days li.event::before{
   background: #595eb6;
