@@ -8,6 +8,9 @@ currYear = date.getFullYear(),
 currMonth = date.getMonth();
 
 const demo = new Date("2023-02-25");
+const list =[new Date("2023-01-01"),new Date("2023-01-16"),new Date("2023-02-14"),new Date("2023-03-17"),new Date("2023-04-08")
+,new Date("2023-05-05"),new Date("2023-05-14"),new Date("2023-06-18"),new Date("2023-06-19"),new Date("2023-07-04"),new Date("2023-09-04")
+,new Date("2023-10-31"),new Date("2023-11-23"),new Date("2023-12-08"),new Date("2023-12-25"),new Date("2023-12-26")]
 
 // storing full name of all months in array
 const months = ["January", "February", "March", "April", "May", "June", "July",
@@ -32,8 +35,7 @@ const renderCalendar = () => {
         let isToday = i === date.getDate() && currMonth === new Date().getMonth() 
                      && currYear === new Date().getFullYear() ? "active" : "";
                      
-        let holiday;
-        if(holiday = i === demo.getDate() && currMonth === demo.getMonth()  && currYear === demo.getFullYear() ? "event" : ""){
+        if(holiday = i === demo.getDate() && currMonth === demo.getMonth() && currYear === demo.getFullYear() ? "event" : ""){
             liTag += `<li class="${holiday}">${i}</li>`;
         }
         else{
