@@ -3,6 +3,9 @@
 
 ._body{
     background-color: #DDD9D5;
+    position:relative;
+    min-height: 100vh;
+    padding-bottom:120px;
 }
 
 /* ----------------body styles above------------------- */
@@ -100,7 +103,7 @@
     padding: 8px 0 5px 0px;
     border: solid;
     /* flex-basis: 100vh; */
-    position: relative;
+    position: absolute;
     bottom: 0;
     width: 100%;
     font-family: Georgia, 'Times New Roman', Arial;

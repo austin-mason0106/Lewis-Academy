@@ -1,7 +1,10 @@
 /* -----------------Body styles below------------- */
 
 ._body {
-  background-color: #DDD9D5
+  background-color: #DDD9D5;
+  position:relative;
+  min-height: 100vh;
+  padding-bottom:120px;
 }
 
 /* ----------------body styles above------------------- */
@@ -76,7 +79,7 @@ table, th, td {
   padding: 8px 0 5px 0px;
   border: solid;
   flex-basis: 100vw;
-  position: relative;
+  position: absolute;
   bottom: 0;
   width: 100%;
   margin-top: 20px;
