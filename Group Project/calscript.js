@@ -7,14 +7,16 @@ let date = new Date(),
 currYear = date.getFullYear(),
 currMonth = date.getMonth();
 
-const demo = new Date("2023-02-25");
-const list =[new Date("2023-01-01"),new Date("2023-01-16"),new Date("2023-02-14"),new Date("2023-03-17"),new Date("2023-04-08")
-,new Date("2023-05-05"),new Date("2023-05-14"),new Date("2023-06-18"),new Date("2023-06-19"),new Date("2023-07-04"),new Date("2023-09-04")
-,new Date("2023-10-31"),new Date("2023-11-23"),new Date("2023-12-08"),new Date("2023-12-25"),new Date("2023-12-26")]
+let demo = new Date("2023-02-25");
+let list =[new Date("01-01-2023"),new Date("01-16-2023"),new Date("02-14-2023"),new Date("03-17-2023"),new Date("04-08-2023")
+,new Date("05-05-2023"),new Date("05-14-2023"),new Date("06-18-2023"),new Date("06-19-2023"),new Date("07-04-2023"),new Date("09-04-2023")
+,new Date("10-31-2023"),new Date("11-23-2023"),new Date("12-08-2023"),new Date("12-25-2023"),new Date("12-26-2023")]
 
 // storing full name of all months in array
 const months = ["January", "February", "March", "April", "May", "June", "July",
               "August", "September", "October", "November", "December"];
+
+
 
 const renderCalendar = () => {
     let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
@@ -34,14 +36,21 @@ const renderCalendar = () => {
         // adding active class to li if the current day, month, and year matched
         let isToday = i === date.getDate() && currMonth === new Date().getMonth() 
                      && currYear === new Date().getFullYear() ? "active" : "";
-                     
-        if(holiday = i === demo.getDate() && currMonth === demo.getMonth() && currYear === demo.getFullYear() ? "event" : ""){
+        holiday = '';
+
+        for(let x = 0; x < list.length; x++){
+        if((i) === list[x].getDate() && currMonth === list[x].getMonth() && currYear === list[x].getFullYear() ){
+            
+            holiday = "event";
             liTag += `<li class="${holiday}">${i}</li>`;
         }
-        else{
-        liTag += `<li class="${isToday}">${i}</li>`;
-        }
-
+        
+        
+        
+    }
+    if(!(holiday == "event")){
+    liTag += `<li class="${isToday}">${i}</li>`;
+    }
         
     }
 
