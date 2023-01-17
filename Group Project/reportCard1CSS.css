@@ -13,8 +13,8 @@
 
 .bar-at-top {
   background-color: #5C534A;
-  height: 35px;
-  width: 100%;
+  height: auto;
+  width: auto;
 }
 
 .topper {
@@ -44,8 +44,18 @@
 
 /* ---------------everything above is for the navbar ---------------*/
 
-table, th, td {
-    border:1px solid black;
+
+
+ 
+
+  td{
+    
+    padding: 10px;
+    width: 40%;
+    height: 40%;
+    border: 1px solid black;
+    box-shadow: 0 0 5px rgb(0, 0, 0);
+
   }
 
   .center{
@@ -63,9 +73,67 @@ table, th, td {
     height: 300px;
   }
   table{
-    margin-left: auto;
-    margin-right: auto;
+
+    padding: 2%;
+    
+    
+    margin-top: 2%;
+    margin-left: 22%;
+    margin-right: 22%;
+    margin-bottom: 2%;
+    
+    display: flex;
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    table-layout: fixed;
+    border-collapse: separate;
+    border: 2px solid;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+    background-color: #e9e7e5;
+    box-shadow: 0 0 4px #ccc;
+    flex-wrap: wrap;
+    
+
+
   }
+  tr{
+
+    font-size: x-large;
+    
+    
+    
+  }
+
+
+  #myBtn{
+    padding: 30px;
+    font-size: x-large;
+    border: 2px solid;
+    text-shadow: 0 0 4px #ccc;
+    
+  }
+
+  #tableHeader{
+    font-size: xx-large;
+    font-weight: bolder;
+  }
+
+  .body1{
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    
+    
+  }
+
+
 /* ----------------footer is below ---------------- */
 
 
@@ -82,9 +150,10 @@ table, th, td {
   position: absolute;
   bottom: 0;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 20%;
   font-family: Georgia, 'Times New Roman', Arial;
   font-size:1.2rem;
+  
 }
 
 .footer p {
@@ -108,6 +177,8 @@ table, th, td {
 .footer li {
   margin: 0px 20px;
 }
+
+
 
 
 /* -----------footer is above ----------------- */
