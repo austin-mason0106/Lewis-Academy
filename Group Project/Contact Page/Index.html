@@ -14,10 +14,19 @@
                 var email = document.querySelector("#email").value;
                 var confirm = document.querySelector("#confirmEmail").value;            // ADD ALERT MESSAGE
 
-                // alert("Email entered: " + email.value + "\nConfirm: " + confirm.value);
-                confirm == email? alert("Emails match") : alert("Emails do not match")
+                if(confirm !== email){          // search element by id, set hidden state to false
+                    
+                    document.querySelector("#warning").hidden = false;
+                    return false;
+                }
+                else{
+                    document.querySelector("#warning").hidden = true;
+                    return true;
+                }
+                
             }
             function sub(){         // confirm information on form
+                let emailCheck = equal();           // boolean; true if emails match
                 
                 let year = document.querySelector("#currentYear").value;            // radio button information
                 if (document.querySelector("#nextYear").checked == true){year = document.querySelector("#nextYear").value;}
@@ -31,10 +40,17 @@
                 let state = document.querySelector("#state").value;
                 let zip = document.querySelector("#zip").value;
                 
-                let correct = confirm("Please verify that the following is correct:\nYear: " + year + "\nE-mail: " + email + "\nFirst name: " + nameF + 
+                if(emailCheck){     // if all fields filled in
+                    let correct = confirm("Please verify that the following is correct:\nYear: " + year + "\nE-mail: " + email + "\nFirst name: " + nameF + 
                 "\nLast name: " + nameL + "\nPhone: " + phone + "\nAddress: " + street + " " + city + ", " + state + " " + zip);
 
                 correct? window.location.href = "thanks.html" : window.location.href = "#";         //if correct = true send to thanks page; else, send to top of page
+                }
+                else{
+                    alert("Please verify that all fields are filled in");
+                }
+                
+                
 
             }
         //-->
@@ -125,11 +141,12 @@
                         <fieldset>
                             <legend>Parent / Guardian Information</legend>
                             <div class="form-group">
-                                <input type="text" id="nameFirst" name="parent_firstname" class="form-control" placeholder="First Name"/>
-                                <input type="text" id="nameLast" name="parent_firstname" class="form-control" placeholder="Last Name" />
-                                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Primary Telephone Number" class="form-control">
-                                <input type="email" class="form-control" id="email" placeholder="E-mail Address" required="true"/>
-                                <input type="email" class="form-control" id="confirmEmail" placeholder="Confirm E-mail Address" required="true" onblur="equal();"/>
+                                <input type="text" id="nameFirst" name="parent_firstname" class="form-control" placeholder="First Name" required/>
+                                <input type="text" id="nameLast" name="parent_firstname" class="form-control" placeholder="Last Name" required/>
+                                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Primary Telephone Number" class="form-control" required/>
+                                <input type="email" class="form-control" id="email" placeholder="E-mail Address" required="true" required/>
+                                <label id="warning" for="confirmEmail" hidden>Emails do not match</label>
+                                <input type="email" class="form-control" id="confirmEmail" placeholder="Confirm E-mail Address" onblur="equal();" required/>
                             </div>
                         </fieldset>
                     </td>
