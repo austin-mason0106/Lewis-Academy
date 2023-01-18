@@ -10,16 +10,32 @@
     <link rel="stylesheet" href="../style.css">
     <script type="text/javascript">
         <!--
-            function equal(){
-                var email = document.querySelector("#email");
-                var confirm = document.querySelector("#confirmEmail");
+            function equal(){       // verify confirm email is the same as email
+                var email = document.querySelector("#email").value;
+                var confirm = document.querySelector("#confirmEmail").value;            // ADD ALERT MESSAGE
 
                 // alert("Email entered: " + email.value + "\nConfirm: " + confirm.value);
-                confirm.value == email.value? alert("Emails match") : alert("Emails do not match")
+                confirm == email? alert("Emails match") : alert("Emails do not match")
             }
-            function sub(){
-                let answer = confirm("You have clicked submit!")
-                alert(answer);
+            function sub(){         // confirm information on form
+                
+                let year = document.querySelector("#currentYear").value;            // radio button information
+                if (document.querySelector("#nextYear").checked == true){year = document.querySelector("#nextYear").value;}
+                
+                let email = document.querySelector("#email").value;         // parent/guardian information
+                let nameF = document.querySelector("#nameFirst").value;
+                let nameL = document.querySelector("#nameLast").value;
+                let phone = document.querySelector("#phone").value;
+                let street = document.querySelector("#street").value;
+                let city = document.querySelector("#city").value;
+                let state = document.querySelector("#state").value;
+                let zip = document.querySelector("#zip").value;
+                
+                let correct = confirm("Please verify that the following is correct:\nYear: " + year + "\nE-mail: " + email + "\nFirst name: " + nameF + 
+                "\nLast name: " + nameL + "\nPhone: " + phone + "\nAddress: " + street + " " + city + ", " + state + " " + zip);
+
+                correct? window.location.href = "thanks.html" : window.location.href = "#";         //if correct = true send to thanks page; else, send to top of page
+
             }
         //-->
     </script>
@@ -80,7 +96,7 @@
        </a>
    </div>
 
-
+    <!--START APPLY NOW PAGE-->
     <form name="frm">
             <table name="table" style="margin: auto; width: 40%;">
                 <tr>
@@ -93,14 +109,13 @@
                         <fieldset>
                             <legend>School Year:</legend>
                             <div>
-                              <input type="radio" id="current_school_year" name="drone" value="current_school_year"
-                                     checked>
-                              <label for="current_school_year">Current School Year (2022-2023)</label>
+                              <input type="radio" id="currentYear" name="Year" value="Current School Year (2022-2023)" checked/>
+                              <label for="currentYear">Current School Year (2022-2023)</label>
                             </div>
                         
                             <div>
-                              <input type="radio" id="next_school_year" name="drone" value="next_school_year">
-                              <label for="next_school_year">Next School Year (2023-2024)</label>
+                              <input type="radio" id="nextYear" name="Year" value="Next School Year (2023-2024)"/>
+                              <label for="nextYear">Next School Year (2023-2024)</label>
                             </div>
                         </fieldset>
                     </td>
@@ -110,8 +125,8 @@
                         <fieldset>
                             <legend>Parent / Guardian Information</legend>
                             <div class="form-group">
-                                <input type="text" id="name" name="parent_firstname" class="form-control" placeholder="First Name"/>
-                                <input type="text" id="name" name="parent_firstname" class="form-control" placeholder="Last Name" />
+                                <input type="text" id="nameFirst" name="parent_firstname" class="form-control" placeholder="First Name"/>
+                                <input type="text" id="nameLast" name="parent_firstname" class="form-control" placeholder="Last Name" />
                                 <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Primary Telephone Number" class="form-control">
                                 <input type="email" class="form-control" id="email" placeholder="E-mail Address" required="true"/>
                                 <input type="email" class="form-control" id="confirmEmail" placeholder="Confirm E-mail Address" required="true" onblur="equal();"/>
@@ -124,17 +139,17 @@
                         <fieldset>
                             <legend>Address:</legend>
                             <div class="form-group">
-                                <input type="text" class="form-control" id="autocomplete" placeholder="Street">
-                                <input type="text" class="form-control" id="inputCity" placeholder="City">
-                                <input type="text" class="form-control" id="inputState" placeholder="State">
-                                <input type="text" class="form-control" id="inputZip" placeholder="Zip">
+                                <input type="text" class="form-control" id="street" placeholder="Street">
+                                <input type="text" class="form-control" id="city" placeholder="City">
+                                <input type="text" class="form-control" id="state" placeholder="State">
+                                <input type="text" class="form-control" id="zip" placeholder="Zip">
                             </div>
                         </fieldset>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: center;">
-                        <input type="button" value="SUBMIT" onclick="sub();">
+                        <input type="button" value="SUBMIT" onClick="sub();" style="width: 25%;">
                     </td>
                 </tr>
             </table>            <!--end table-->
