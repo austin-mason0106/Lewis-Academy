@@ -293,3 +293,15 @@ body {
 /* ---------------index styling above----------------- */
 
 
+/*START APPLY NOW STYLING*/
+
+#warning{
+    color: #712b29;
+    background-color: #f7dddc;
+    border: 2px solid #f4cfce;
+    width: 100%;
+    padding: 0px 5px 0px 100px;
+    margin-bottom: 2px;
+    text-align: left;
+}
+
