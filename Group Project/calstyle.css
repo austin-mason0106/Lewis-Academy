@@ -17,7 +17,7 @@ body{
   
 }
 .wrapper{
-  width: 450px;
+  width: 700px;
   background: rgb(255, 255, 255);
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
@@ -113,13 +113,13 @@ header .current-date{
   text-align: left;
 }
 .calenderSpace{
-  width: 70%;
+  width: 100%;
 }
 .eventTable{
   position: absolute;
   right: 0px;
   overflow-y: scroll;
-  text-align: center;
+  text-align: left;
   height:100%;
   width: 30%;
 }
