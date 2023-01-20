@@ -10,28 +10,43 @@
     <link rel="stylesheet" href="../style.css">
     <script type="text/javascript">
         <!--
+            function validEmail(inputName){
+                let inputEmail = document.querySelector(inputName).value;
+                
+                if(!inputEmail.includes("@") || !inputEmail.includes(".com")){
+                    document.querySelector("#warning1").hidden = false;
+                    return false;
+                }
+                else{
+                    document.querySelector("#warning1").hidden = true;
+                    return true;
+                }
+            }           // end validEmail
+
             function equal(){       // verify confirm email is the same as email
                 var email = document.querySelector("#email").value;
                 var confirm = document.querySelector("#confirmEmail").value;            // ADD ALERT MESSAGE
 
                 if(confirm !== email){          // search element by id, set hidden state to false
                     
-                    document.querySelector("#warning").hidden = false;
+                    document.querySelector("#warning2").hidden = false;
                     return false;
                 }
                 else{
-                    document.querySelector("#warning").hidden = true;
+                    document.querySelector("#warning2").hidden = true;
                     return true;
                 }
                 
-            }
+            }           //end equal()
             function sub(){         // confirm information on form
                 let emailCheck = equal();           // boolean; true if emails match
+                let emailValid = validEmail("#email");          //boolean; true if email is valid; Q: make variable global?
+                let complete = true;
                 
-                let year = document.querySelector("#currentYear").value;            // radio button information
+                let year = document.querySelector("#currentYear").value;            // load radio button information
                 if (document.querySelector("#nextYear").checked == true){year = document.querySelector("#nextYear").value;}
                 
-                let email = document.querySelector("#email").value;         // parent/guardian information
+                let email = document.querySelector("#email").value;         // load parent/guardian information
                 let nameF = document.querySelector("#nameFirst").value;
                 let nameL = document.querySelector("#nameLast").value;
                 let phone = document.querySelector("#phone").value;
@@ -39,8 +54,13 @@
                 let city = document.querySelector("#city").value;
                 let state = document.querySelector("#state").value;
                 let zip = document.querySelector("#zip").value;
+
+                // if any field is empty, set complete to false
+                if(emailCheck == false || emailValid == false || email == "" || nameF == "" || nameL == "" || phone == "" || street == "" || city == "" || state == "" || zip == ""){         
+                    complete = false;
+                }
                 
-                if(emailCheck){     // if all fields filled in
+                if(complete){     // if all fields filled in
                     let correct = confirm("Please verify that the following is correct:\nYear: " + year + "\nE-mail: " + email + "\nFirst name: " + nameF + 
                 "\nLast name: " + nameL + "\nPhone: " + phone + "\nAddress: " + street + " " + city + ", " + state + " " + zip);
 
@@ -49,10 +69,8 @@
                 else{
                     alert("Please verify that all fields are filled in");
                 }
-                
-                
-
-            }
+            }           //end sub()
+            
         //-->
     </script>
     
@@ -141,11 +159,12 @@
                         <fieldset>
                             <legend>Parent / Guardian Information</legend>
                             <div class="form-group">
-                                <input type="text" id="nameFirst" name="parent_firstname" class="form-control" placeholder="First Name" required/>
-                                <input type="text" id="nameLast" name="parent_firstname" class="form-control" placeholder="Last Name" required/>
+                                <input type="text" id="nameFirst" name="parent_firstname" class="form-control" placeholder="First Name"/>
+                                <input type="text" id="nameLast" name="parent_firstname" class="form-control" placeholder="Last Name"/>
                                 <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Primary Telephone Number" class="form-control" required/>
-                                <input type="email" class="form-control" id="email" placeholder="E-mail Address" required="true" required/>
-                                <label id="warning" for="confirmEmail" hidden>Emails do not match</label>
+                                <label id="warning1" class="warning" for="email" hidden>PLEASE ENTER A VALID E-MAIL ADDRESS</label>
+                                <input type="email" class="form-control" id="email" placeholder="E-mail Address" required="true" onblur="validEmail('#email');" required/>
+                                <label id="warning2" class="warning" for="confirmEmail" hidden>EMAILS DO NOT MATCH</label>
                                 <input type="email" class="form-control" id="confirmEmail" placeholder="Confirm E-mail Address" onblur="equal();" required/>
                             </div>
                         </fieldset>
