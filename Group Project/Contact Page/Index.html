@@ -40,7 +40,7 @@
             }           //end equal()
             function sub(){         // confirm information on form
                 let emailCheck = equal();           // boolean; true if emails match
-                let emailValid = validEmail("#email");          //boolean; true if email is valid; Q: make variable global?
+                let emailValid = validEmail("#email");   //boolean; true if email is valid; Q: make variable global?; this function runs on submit and returns false
                 let complete = true;
                 
                 let year = document.querySelector("#currentYear").value;            // load radio button information
@@ -124,7 +124,7 @@
         </div>
     </nav>
    <div class="topper container-fluid">
-       <a class="navbar-brand" href="/Group Project/index.html">
+       <a class="navbar-brand" href="index.html">
            <img class="img-thumbnail logo" src="../Images/LPALogo.png" alt="school logo">
            <span class="school-name fs-1 text">Lewis Preparatory Academy</span>
        </a>
