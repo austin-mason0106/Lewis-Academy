@@ -8,7 +8,7 @@ currYear = date.getFullYear(),
 currMonth = date.getMonth();
 
 let demo = new Date("2023-02-25");
-let list =[new Date("01-01-2023"),new Date("01-16-2023"),new Date("02-14-2023"),new Date("03-17-2023"),new Date("04-08-2023")
+let list1 =[new Date("01-01-2023"),new Date("01-16-2023"),new Date("02-14-2023"),new Date("03-17-2023"),new Date("04-08-2023")
 ,new Date("05-05-2023"),new Date("05-14-2023"),new Date("06-18-2023"),new Date("06-19-2023"),new Date("07-04-2023"),new Date("09-04-2023")
 ,new Date("10-31-2023"),new Date("11-23-2023"),new Date("12-08-2023"),new Date("12-25-2023"),new Date("12-26-2023")]
 
@@ -38,8 +38,8 @@ const renderCalendar = () => {
                      && currYear === new Date().getFullYear() ? "active" : "";
         holiday = '';
 
-        for(let x = 0; x < list.length; x++){
-        if((i) === list[x].getDate() && currMonth === list[x].getMonth() && currYear === list[x].getFullYear() ){
+        for(let x = 0; x < list1.length; x++){
+        if((i) === list1[x].getDate() && currMonth === list1[x].getMonth() && currYear === list1[x].getFullYear() ){
             
             holiday = "event";
             liTag += `<li class="${holiday}">${i}</li>`;
