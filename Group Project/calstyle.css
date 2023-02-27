@@ -113,13 +113,13 @@ header .current-date{
   text-align: left;
 }
 .calenderSpace{
-  width: 70%;
+  width: 100%;
 }
 .eventTable{
   position: absolute;
   right: 0px;
   overflow-y: scroll;
-  text-align: center;
+  text-align: left;
   height:100%;
   width: 30%;
 }

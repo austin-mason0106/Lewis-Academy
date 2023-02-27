@@ -6,8 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!------- make sure booststrap 5.2.3 is the version included-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
     <link rel="stylesheet" href="../style.css">
-    <title>Contact</title>
+    <script type="text/javascript">
+        <!--
+            function validEmail(inputName){
+                let inputEmail = document.querySelector(inputName).value;
+                
+                if(!inputEmail.includes("@") || !inputEmail.includes(".com")){
+                    document.querySelector("#warning1").hidden = false;
+                    return false;
+                }
+                else{
+                    document.querySelector("#warning1").hidden = true;
+                    return true;
+                }
+            }           // end validEmail
+
+            function equal(){       // verify confirm email is the same as email
+                var email = document.querySelector("#email").value;
+                var confirm = document.querySelector("#confirmEmail").value;            // ADD ALERT MESSAGE
+
+                if(confirm !== email){          // search element by id, set hidden state to false
+                    
+                    document.querySelector("#warning2").hidden = false;
+                    return false;
+                }
+                else{
+                    document.querySelector("#warning2").hidden = true;
+                    return true;
+                }
+                
+            }           //end equal()
+            function sub(){         // confirm information on form
+                let emailCheck = equal();           // boolean; true if emails match
+                let emailValid = validEmail("#email");   //boolean; true if email is valid; Q: make variable global?; this function runs on submit and returns false
+                let complete = true;
+                
+                let year = document.querySelector("#currentYear").value;            // load radio button information
+                if (document.querySelector("#nextYear").checked == true){year = document.querySelector("#nextYear").value;}
+                
+                let email = document.querySelector("#email").value;         // load parent/guardian information
+                let nameF = document.querySelector("#nameFirst").value;
+                let nameL = document.querySelector("#nameLast").value;
+                let phone = document.querySelector("#phone").value;
+                let street = document.querySelector("#street").value;
+                let city = document.querySelector("#city").value;
+                let state = document.querySelector("#state").value;
+                let zip = document.querySelector("#zip").value;
+
+                // if any field is empty, set complete to false
+                if(emailCheck == false || emailValid == false || email == "" || nameF == "" || nameL == "" || phone == "" || street == "" || city == "" || state == "" || zip == ""){         
+                    complete = false;
+                }
+                
+                if(complete){     // if all fields filled in
+                    let correct = confirm("Please verify that the following is correct:\nYear: " + year + "\nE-mail: " + email + "\nFirst name: " + nameF + 
+                "\nLast name: " + nameL + "\nPhone: " + phone + "\nAddress: " + street + " " + city + ", " + state + " " + zip);
+
+                correct? window.location.href = "thanks.html" : window.location.href = "#";         //if correct = true send to thanks page; else, send to top of page
+                }
+                else{
+                    alert("Please verify that all fields are filled in");
+                }
+            }           //end sub()
+            
+        //-->
+    </script>
+    
+    <title>Apply Now</title>
 </head>
 <body>
     <!-- This is where the nav bar will go- Zeb -->
@@ -28,7 +95,7 @@
                         <a class="nav-link" href="../About-us.html">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../Contact Page/Index.html">Apply Now</a>
+                        <a class="nav-link" href="Index.html">Apply Now</a>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Parent Portal
@@ -57,78 +124,75 @@
         </div>
     </nav>
    <div class="topper container-fluid">
-       <a class="navbar-brand" href="/Group Project/index.html">
+       <a class="navbar-brand" href="../index.html">
            <img class="img-thumbnail logo" src="../Images/LPALogo.png" alt="school logo">
            <span class="school-name fs-1 text">Lewis Preparatory Academy</span>
        </a>
    </div>
-   <!--------navbar and topper are above-->
 
-    <form action="/my-handling-form-page" method="post">
-            
-        
-            <fieldset>
-                <legend>School Year:</legend>
-            
-                <div>
-                  <input type="radio" id="current_school_year" name="drone" value="current_school_year"
-                         checked>
-                  <label for="current_school_year">Current School Year (2022-2023)</label>
-                </div>
-            
-                <div>
-                  <input type="radio" id="next_school_year" name="drone" value="next_school_year">
-                  <label for="next_school_year">Next School Year (2023-2024)</label>
-                </div>
-            </fieldset>
+    <!--START APPLY NOW PAGE-->
+    <form name="frm">
+            <table name="table" style="margin: auto; width: 40%;">
+                <tr>
+                    <th>
+                        <h1>Submit Application to Apply</h1>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <fieldset>
+                            <legend>School Year:</legend>
+                            <div>
+                              <input type="radio" id="currentYear" name="Year" value="Current School Year (2022-2023)" checked/>
+                              <label for="currentYear">Current School Year (2022-2023)</label>
+                            </div>
+                        
+                            <div>
+                              <input type="radio" id="nextYear" name="Year" value="Next School Year (2023-2024)"/>
+                              <label for="nextYear">Next School Year (2023-2024)</label>
+                            </div>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <fieldset>
+                            <legend>Parent / Guardian Information</legend>
+                            <div class="form-group">
+                                <input type="text" id="nameFirst" name="parent_firstname" class="form-control" placeholder="First Name"/>
+                                <input type="text" id="nameLast" name="parent_firstname" class="form-control" placeholder="Last Name"/>
+                                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Primary Telephone Number" class="form-control" required/>
+                                <label id="warning1" class="warning" for="email" hidden>PLEASE ENTER A VALID E-MAIL ADDRESS</label>
+                                <input type="email" class="form-control" id="email" placeholder="E-mail Address" required="true" onblur="validEmail('#email');" required/>
+                                <label id="warning2" class="warning" for="confirmEmail" hidden>EMAILS DO NOT MATCH</label>
+                                <input type="email" class="form-control" id="confirmEmail" placeholder="Confirm E-mail Address" onblur="equal();" required/>
+                            </div>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <fieldset>
+                            <legend>Address:</legend>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="street" placeholder="Street">
+                                <input type="text" class="form-control" id="city" placeholder="City">
+                                <input type="text" class="form-control" id="state" placeholder="State">
+                                <input type="text" class="form-control" id="zip" placeholder="Zip">
+                            </div>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">
+                        <input type="button" value="SUBMIT" onClick="sub();" style="width: 25%;">
+                    </td>
+                </tr>
+            </table>            <!--end table-->
+      </form>           <!--end form-->
 
 
-          
-            <label for="name">Parent/Guardian First Name</label>
-            <input type="text" id="name" name="parent_firstname" />
 
-            <label for="name">Parent/Guardian Last Name</label>
-            <input type="text" id="name" name="parent_firstname" />
-        
-
-            <div class="form-group">
-                <label for="email">Parent/Guardian E-mail Address:</label>
-                <input type="email" class="form-control" id="emailInput" placeholder="Email" aria-required="true" required/>
-              </div>
-              <div class="form-group">
-                <label for="confirmEmail">Confirm E-mail Address:</label>
-                <input type="email" class="form-control" id="ConfirmEmailInput" placeholder="ConfirmEmail" 
-                  onblur="if(this.value!=document.getElementById('emailInput').value) alert('Nope!')"  aria-required="true" required/>
-              </div>
-        
-        
-              <label for="phone">Primary Telephone Number:</label>
-              <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>      
-              <small>Format: 123-456-7890</small>
-
-              <div class="form-group">
-                <input type="street" 
-                       class="form-control" 
-                       id="autocomplete" 
-                       placeholder="Street"><br>
-                
-                <input type="city" 
-                       class="form-control" 
-                       id="inputCity" 
-                       placeholder="City"><br>
-                
-                <input type="state" 
-                       class="form-control" 
-                       id="inputState" 
-                       placeholder="State"><br>
-                
-                <input type="zip" 
-                       class="form-control" 
-                       id="inputZip" 
-                       placeholder="Zip">
-
-        
-      </form>
     <!-----footer is below-->
     <footer class="footer">
        <ul class="footer-link-list">
